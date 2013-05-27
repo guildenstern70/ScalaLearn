@@ -9,9 +9,11 @@ package net.littlelite.scalalearn
  *
  */
 object Main {
+  
+	final val VERSION = "v.0.1.1024" 
     
     def main(args: Array[String]) {
-    	println("ScalaLearn v.0.1")
+    	println("ScalaLearn %s".format(VERSION))
     	
     	ListAndTuple.test
     	MutableAndImmutableSet.test

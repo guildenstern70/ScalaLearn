@@ -21,22 +21,15 @@ object ListAndTuple {
     val myTuple = (77, "Alessio", 345.7)
     
     def test {
+    	      
+    	def printDetails(test: PrintTest, results: Iterator[Any]) {
+    		results.foreach { i => test.addResult("> Value = %s".format(i.toString)) }
+    		test.print
+    	}
         
-        var test = new PrintTest("LIST 1/2")
-        for (oInt <- myList1) {
-            test.addResult("> Value = %d".format(oInt))
-        }
-        test.print
-        
-        test = new PrintTest("LIST 2/2")
-        for (oInt <- myList2) {
-            test.addResult("> Value = %d".format(oInt))
-        }
-        test.print
-        
-        test = new PrintTest("TUPLE")
-        myTuple.productIterator.foreach { i => test.addResult("> Value = %s".format(i.toString)) }
-        test.print
+        printDetails( new PrintTest("LIST 1/2"), myList1.iterator );
+        printDetails( new PrintTest("LIST 2/2"), myList2.iterator );
+        printDetails( new PrintTest("TUPLE"), myTuple.productIterator );
         
     }
 

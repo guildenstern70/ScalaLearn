@@ -12,7 +12,7 @@ class PrintTest(testName: String) {
    
     def print() {
         
-        val testOutput : List[String] = this.results.toList
+        val testOutput: List[String] = this.results.toList
         
         println()
         println("** TEST %s **".format(testName))
