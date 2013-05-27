@@ -8,7 +8,7 @@ object FirstClassFunctions {
         
         val test = new PrintTest("FIRST CLASS FUNCTION")
         val result = areaDelCerchio(10).toString
-        test.addResult(" Area del cerchio di raggio 10 => %s ".format(result))      
+        test.addResult("> Circle area with radius = 10 => %s ".format(result))      
         test.print
 
     }
