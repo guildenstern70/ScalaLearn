@@ -19,36 +19,30 @@
  */
 package net.littlelite.scalalearn
 
-class ClassWithFunctions(name: String, surname: String) {
+object Currying {
     
-    // Constructor
-    private val className = name;
-    private val classSurname = surname;
-    
-    // Auxiliary constructor
-    def this() = this("Null", "Null")
-    
-    // Preconditions
-    require(name != null)
-    require(surname != null)
-    
-    // Functions (methods)
-    // Parameters are VAL not VAR
-    def newFunction(a: Int, b: Int): Int = {
-        if (a > b)
-            a
-        else
-            b
+    def printTestMessages(testName: String, messages: List[String])(joiner: List[String] => String) {
+                
+        val resultsString = joiner(messages)
+        
+        println()
+        println("** TEST %s **".format(testName))
+        println(resultsString)
+        println()
     }
     
-    // Overridden method
-    override def toString() : String = {
-        val sb = new StringBuilder()
-        sb.append("Object of ClassWithFunctions = ")
-        sb.append(this.name)
-        sb.append(' ')
-        sb.append(this.surname)
-        sb.toString
+    def example() {
+        
+        val messages = List("Ciao","Mondo")
+        
+        printTestMessages("Prova Test", messages) {
+            (messages: List[String]) => messages.mkString(sys.props("line.separator"))
+        }        
     }
     
+    def test {
+        println(example())
+    }
+    
+
 }
