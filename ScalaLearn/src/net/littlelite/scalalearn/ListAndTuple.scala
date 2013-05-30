@@ -24,15 +24,10 @@ object ListAndTuple {
     // You may access elements with myTuple._1. Attention: tuple is one-based (myTuple._2 == "Alessio")
     
     def test {
-    	      
-    	def printDetails(test: PrintTest, results: Iterator[Any]) {
-    		results.foreach { i => test.addResult("> Value = %s".format(i.toString)) }
-    		test.print
-    	}
-        
-        printDetails( new PrintTest("LIST 1/2"), myList1.iterator );
-        printDetails( new PrintTest("LIST 2/2"), myList2.iterator );
-        printDetails( new PrintTest("TUPLE"), myTuple.productIterator );
+    	        	
+    	new PrintTest("LIST 1/2").printDetails(myList1.iterator)
+    	new PrintTest("LIST 2/2").printDetails(myList2.iterator)
+    	new PrintTest("TUPLE").printDetails(myTuple.productIterator)
         
     }
 

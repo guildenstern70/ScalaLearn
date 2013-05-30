@@ -10,7 +10,7 @@ package net.littlelite.scalalearn
  */
 object Main {
   
-	final val VERSION = "v.0.1.1024" 
+	final val VERSION = "v.0.1.1048" 
     
     def main(args: Array[String]) {
     	println("ScalaLearn %s".format(VERSION))
@@ -19,6 +19,8 @@ object Main {
     	MutableAndImmutableSet.test
     	FirstClassFunctions.test
     	Closure.test
+    	MapForEachAndSoOn.test
+    	HighOrderFunction.test
     }
 
 }
