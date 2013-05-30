@@ -19,6 +19,8 @@
  */
 package net.littlelite.scalalearn
 
+import net.littlelite.scalalearn.inheritance.ShapesTest
+
 /**
  * Main launcher
  *
@@ -37,6 +39,7 @@ object Main {
     	MapForEachAndSoOn.test
     	HighOrderFunction.test
     	Currying.test
+    	ShapesTest.test
     }
 
 }

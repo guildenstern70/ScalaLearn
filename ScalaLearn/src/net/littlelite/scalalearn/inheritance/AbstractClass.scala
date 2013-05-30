@@ -18,7 +18,7 @@
  * 
  */
 
-package net.littlelite.scalalearn
+package net.littlelite.scalalearn.inheritance
 
 abstract class AbstractClass {
     
