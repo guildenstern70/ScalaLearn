@@ -19,7 +19,7 @@
  */
 package net.littlelite.scalalearn
 
-class ClassWithFunctions(name: String, surname: String) {
+class ClassTemplate(name: String, surname: String) {
     
     // Constructor
     private val className = name;
@@ -32,7 +32,11 @@ class ClassWithFunctions(name: String, surname: String) {
     require(name != null)
     require(surname != null)
     
-    // Functions (methods)
+    // Properties
+    def nameOfClass: String = this.className
+    def surnameOfClass: String = this.classSurname
+    
+    // Methods
     // Parameters are VAL not VAR
     def newFunction(a: Int, b: Int): Int = {
         if (a > b)
@@ -45,9 +49,9 @@ class ClassWithFunctions(name: String, surname: String) {
     override def toString() : String = {
         val sb = new StringBuilder()
         sb.append("Object of ClassWithFunctions = ")
-        sb.append(this.name)
+        sb.append(ClassTemplate.this.name)
         sb.append(' ')
-        sb.append(this.surname)
+        sb.append(ClassTemplate.this.surname)
         sb.toString
     }
     

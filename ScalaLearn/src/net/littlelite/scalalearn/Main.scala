@@ -25,7 +25,7 @@ package net.littlelite.scalalearn
  */
 object Main {
   
-	final val VERSION = "v.0.1.2048" 
+	final val VERSION = "v.0.1.3012" 
     
     def main(args: Array[String]) {
     	println("ScalaLearn %s".format(VERSION))

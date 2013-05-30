@@ -17,32 +17,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
+
 package net.littlelite.scalalearn
 
-object Currying {
+abstract class AbstractClass {
     
-    def printTestMessages(testName: String, messages: List[String])(joiner: List[String] => String) {
-                
-        val resultsString = joiner(messages)
-        
-        println()
-        println("** TEST %s **".format(testName))
-        println(resultsString)
-        println()
-    }
-    
-    def example() {
-        
-        val messages = List("Ciao","Mondo")
-        
-        printTestMessages("Prova Test", messages) {
-            (messages: List[String]) => messages.mkString(sys.props("line.separator"))
-        }        
-    }
-    
-    def test {
-        this.example
-    }
-    
+    def name: String
+    def area: Double
 
 }
