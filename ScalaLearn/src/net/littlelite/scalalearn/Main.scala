@@ -20,6 +20,7 @@
 package net.littlelite.scalalearn
 
 import net.littlelite.scalalearn.inheritance.ShapesTest
+import net.littlelite.scalalearn.traits.ClassWithTrait
 
 /**
  * Main launcher
@@ -40,6 +41,7 @@ object Main {
     	HighOrderFunction.test
     	Currying.test
     	ShapesTest.test
+    	ClassWithTrait.test
     }
 
 }
