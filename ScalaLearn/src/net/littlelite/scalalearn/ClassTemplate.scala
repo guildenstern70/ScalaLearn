@@ -22,8 +22,8 @@ package net.littlelite.scalalearn
 class ClassTemplate(name: String, surname: String) {
     
     // Constructor
-    private val className = name;
-    private val classSurname = surname;
+    protected val className = name;
+    protected val classSurname = surname;
     
     // Auxiliary constructor
     def this() = this("Null", "Null")

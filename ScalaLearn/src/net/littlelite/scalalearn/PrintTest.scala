@@ -25,6 +25,10 @@ class PrintTest(testName: String) {
     
     val results = new ListBuffer[String]
     
+    def +=(result: String) {
+        this.addResult(result)
+    }
+    
     def addResult(result: String) {
         results.append(result)
     }
