@@ -23,7 +23,7 @@ import net.littlelite.scalalearn.inheritance.ShapesTest
 import net.littlelite.scalalearn.traits.TraitsTest
 
 /**
- * Main launcher
+ * Main application launcher
  *
  */
 object Main {
