@@ -19,7 +19,7 @@
  */
 package net.littlelite.scalalearn
 
-object Currying {
+object Currying extends LearningModule {
     
     def printTestMessages(testName: String, messages: List[String])(joiner: List[String] => String) {
                 
@@ -40,7 +40,7 @@ object Currying {
         }        
     }
     
-    def test {
+    def printOutput {
         this.example
     }
     

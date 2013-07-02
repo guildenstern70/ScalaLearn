@@ -1,10 +1,11 @@
 package net.littlelite.scalalearn.inheritance
 
 import ShapeType._
+import net.littlelite.scalalearn.LearningModule
 
-object ShapesTest {
+object ShapesTest extends LearningModule {
     
-    def test {
+    def printOutput {
         
         println("** TEST Inheritance **")
         

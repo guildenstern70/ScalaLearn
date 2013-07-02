@@ -1,8 +1,8 @@
 /**
  * Scala Learn
- *  
- * Copyright (C) Alessio Saltarin - 2013 
- * 
+ *
+ * Copyright (C) Alessio Saltarin - 2013
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -15,33 +15,38 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  */
 package net.littlelite.scalalearn
 
 import net.littlelite.scalalearn.inheritance.ShapesTest
 import net.littlelite.scalalearn.traits.TraitsTest
+import net.littlelite.scalalearn.test.TestRunner
 
 /**
  * Main application launcher
  *
  */
 object Main {
-  
-	final val VERSION = "v.0.1.3012" 
-    
-    def main(args: Array[String]) {
-    	println("ScalaLearn %s".format(VERSION))
-    	
-    	ListAndTuple.test
-    	MutableAndImmutableSet.test
-    	FirstClassFunctions.test
-    	Closure.test
-    	MapForEachAndSoOn.test
-    	HighOrderFunction.test
-    	Currying.test
-    	ShapesTest.test
-    	TraitsTest.test
+
+  final val VERSION = "v.0.1.4040"
+
+  def main(args: Array[String]) {
+    println("ScalaLearn %s".format(VERSION))
+
+    if (args.length > 0 && args(0) == "-test") {
+      TestRunner.execute()
+    } else {
+      ListAndTuple.printOutput
+      MutableAndImmutableSet.printOutput
+      FirstClassFunctions.printOutput
+      Closure.printOutput
+      MapForEachAndSoOn.printOutput
+      HighOrderFunction.printOutput
+      Currying.printOutput
+      ShapesTest.printOutput
+      TraitsTest.printOutput
     }
+  }
 
 }

@@ -19,13 +19,13 @@
  */
 package net.littlelite.scalalearn
 
-object FirstClassFunctions {
+object FirstClassFunctions extends LearningModule {
     
     val areaDelCerchio = (raggio: Double) => { raggio*raggio*Math.PI }
     
-    def test() {
+    def printOutput() {
         
-        val test = new PrintTest("FIRST CLASS FUNCTION")
+        val test = new ResultsPrinter("FIRST CLASS FUNCTION")
         val result = areaDelCerchio(10).toString
         test.addResult("> Circle area with radius = 10 => %s ".format(result))      
         test.print

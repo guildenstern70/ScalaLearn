@@ -21,7 +21,7 @@ package net.littlelite.scalalearn
 
 //import scala.collection.mutable.Set;
 
-object MutableAndImmutableSet {
+object MutableAndImmutableSet extends LearningModule {
     
     // Set => Depends on import: mutable or immutable
     // by default Set is immutable.
@@ -36,9 +36,9 @@ object MutableAndImmutableSet {
     var jetSet: Set[String] = Set(s1, s2)
     jetSet += "Lear"
         
-    def test {
+    def printOutput {
         
-        val test = new PrintTest("SET")
+        val test = new ResultsPrinter("SET")
         val jetSetVal = this.jetSet;
         for (s <- jetSetVal) {
             test.addResult("> Value = %s".format(s))

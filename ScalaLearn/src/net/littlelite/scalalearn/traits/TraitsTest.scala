@@ -1,9 +1,10 @@
 package net.littlelite.scalalearn.traits
 
 import net.littlelite.scalalearn.ClassTemplate
-import net.littlelite.scalalearn.PrintTest
+import net.littlelite.scalalearn.ResultsPrinter
+import net.littlelite.scalalearn.LearningModule
 
-object TraitsTest {
+object TraitsTest extends LearningModule {
     
     class ClassWithTraits extends Speaking with Dancing {
         
@@ -20,9 +21,9 @@ object TraitsTest {
     val classWTraits = new TraitsTest.ClassWithTraits
     val classWStackableTrait = new TraitsTest.StackedModifications("Pippo", "Rossi")
     
-    def test() {
+    def printOutput() {
         
-        val test = new PrintTest("Traits")  
+        val test = new ResultsPrinter("Traits")  
         
         test += "This object speaks and dance:"
         test += classWTraits.speak

@@ -19,7 +19,7 @@
  */
 package net.littlelite.scalalearn
 
-object Closure {
+object Closure extends LearningModule {
     
     var someNumbers = List(11, 10, 5, 0, 5, 10)
     
@@ -28,8 +28,8 @@ object Closure {
     // value of someNumbers
     val closure = (f: Int) => { someNumbers.filter( _ > f) }
     
-    def test() {
-        val test = new PrintTest("CLOSURE")
+    def printOutput() {
+        val test = new ResultsPrinter("CLOSURE")
         someNumbers = List(11, 10, 6, 10, 5, 10)
         val result = closure(5)
         for (oInt <- result) {

@@ -21,7 +21,7 @@ package net.littlelite.scalalearn
 
 import scala.collection.mutable.ListBuffer
 
-object ListAndTuple {
+object ListAndTuple extends LearningModule {
 
     // List => Immutable collection of objects of the same type
     var myList1 = List(1, 2, 3)
@@ -42,11 +42,11 @@ object ListAndTuple {
     val myTuple = (77, "Alessio", 345.7)
     // You may access elements with myTuple._1. Attention: tuple is one-based (myTuple._2 == "Alessio")
     
-    def test {
+    def printOutput {
     	        	
-    	new PrintTest("LIST 1/2").printDetails(myList1.iterator)
-    	new PrintTest("LIST 2/2").printDetails(myList2.iterator)
-    	new PrintTest("TUPLE").printDetails(myTuple.productIterator)
+    	new ResultsPrinter("LIST 1/2").printDetails(myList1.iterator)
+    	new ResultsPrinter("LIST 2/2").printDetails(myList2.iterator)
+    	new ResultsPrinter("TUPLE").printDetails(myTuple.productIterator)
         
     }
 

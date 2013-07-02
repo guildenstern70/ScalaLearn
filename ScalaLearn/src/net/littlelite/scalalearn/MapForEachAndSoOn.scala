@@ -19,7 +19,7 @@
  */
 package net.littlelite.scalalearn
 
-object MapForEachAndSoOn {
+object MapForEachAndSoOn extends LearningModule {
     
     val numeri: List[Int] = List(1, 2, 3, 4, 5, 6)
     
@@ -33,10 +33,10 @@ object MapForEachAndSoOn {
         sum
     }
     
-    def test() {
-        new PrintTest("List Map").printDetails(numeriMapped().iterator)
-        new PrintTest("List Sum").printDetail(numeriSum())
-        new PrintTest("List ForEach").printDetail(numeriForEach())
+    def printOutput() {
+        new ResultsPrinter("List Map").printDetails(numeriMapped().iterator)
+        new ResultsPrinter("List Sum").printDetail(numeriSum())
+        new ResultsPrinter("List ForEach").printDetail(numeriForEach())
     }
     
 
