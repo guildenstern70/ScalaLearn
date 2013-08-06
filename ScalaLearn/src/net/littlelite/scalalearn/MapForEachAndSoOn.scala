@@ -35,8 +35,8 @@ object MapForEachAndSoOn {
     
     def test() {
         new PrintTest("List Map").printDetails(numeriMapped().iterator)
-        new PrintTest("List Sum").printDetail(numeriSum())
-        new PrintTest("List ForEach").printDetail(numeriForEach())
+        new PrintTest("List Sum").printSingleDetail(numeriSum())
+        new PrintTest("List ForEach").printSingleDetail(numeriForEach())
     }
     
 

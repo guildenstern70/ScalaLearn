@@ -33,7 +33,7 @@ class PrintTest(testName: String) {
         results.append(result)
     }
     
-    def printDetail(result: Any) {
+    def printSingleDetail(result: Any) {
         this.addResult(result.toString)
         this.print
     }

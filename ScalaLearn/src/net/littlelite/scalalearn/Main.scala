@@ -42,6 +42,7 @@ object Main {
     	Currying.test
     	ShapesTest.test
     	TraitsTest.test
+    	Switch.test
     }
 
 }

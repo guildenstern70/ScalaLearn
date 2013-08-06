@@ -38,6 +38,7 @@ class ClassTemplate(name: String, surname: String) {
     
     // Methods
     // Parameters are VAL not VAR
+    // Also note the return type = Int
     def newFunction(a: Int, b: Int): Int = {
         if (a > b)
             a

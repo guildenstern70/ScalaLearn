@@ -37,8 +37,8 @@ object HighOrderFunction {
         val latoPentagono: Double = 5.0f
         val latoEsagono: Double = 6.0f
         
-        new PrintTest("HighOrder 1/2").printDetail(polyAreaComputer(latoPentagono, pentagonoComputer))
-        new PrintTest("HighOrder 2/2").printDetail(polyAreaComputer(latoEsagono, esagonoComputer))
+        new PrintTest("HighOrder 1/2").printSingleDetail(polyAreaComputer(latoPentagono, pentagonoComputer))
+        new PrintTest("HighOrder 2/2").printSingleDetail(polyAreaComputer(latoEsagono, esagonoComputer))
         
     }
 
