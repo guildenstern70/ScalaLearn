@@ -1,8 +1,8 @@
 /**
  * Scala Learn
- *  
- * Copyright (C) Alessio Saltarin - 2013 
- * 
+ *
+ * Copyright (C) Alessio Saltarin - 2013
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -15,9 +15,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  */
-
 
 package net.littlelite.scalalearn.inheritance
 
@@ -25,14 +24,13 @@ import ShapeType._
 
 // Notice how we use 'parametric fields' instead of parameters
 class Shape(
-        val shapeName: String
-        ) extends AbstractClass {
-    
-    override def name: String = this.shapeName 
+    val shapeName: String) extends AbstractClass {
+
+    override def name: String = this.shapeName
     override def area: Double = -1.0f
-    
+
     override def toString: String = this.shapeName
-    
+
     def shapeType: ShapeType = ShapeType.Unknown
 
 }

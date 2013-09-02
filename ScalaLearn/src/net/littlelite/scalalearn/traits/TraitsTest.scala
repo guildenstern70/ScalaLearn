@@ -1,8 +1,8 @@
 /**
  * Scala Learn
- *  
- * Copyright (C) Alessio Saltarin - 2013 
- * 
+ *
+ * Copyright (C) Alessio Saltarin - 2013
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -15,42 +15,43 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  */
 
 package net.littlelite.scalalearn.traits
 
 import net.littlelite.scalalearn.ClassTemplate
-import net.littlelite.scalalearn.PrintTest
+import net.littlelite.scalalearn.ResultsPrinter
+import net.littlelite.scalalearn.LearningModule
 
-object TraitsTest {
-    
+object TraitsTest extends LearningModule {
+
     class ClassWithTraits extends Speaking with Dancing {
-        
-	    def test() {
-	        this.speak;
-	        this.dance;
-	    }
-	    
+
+        def test() {
+            this.speak;
+            this.dance;
+        }
+
     }
-    
-    class StackedModifications(smName: String, smSurname: String) 
-    	extends ClassTemplate(smName, smSurname) with StackableTrait
-    
+
+    class StackedModifications(smName: String, smSurname: String)
+        extends ClassTemplate(smName, smSurname) with StackableTrait
+
     val classWTraits = new TraitsTest.ClassWithTraits
     val classWStackableTrait = new TraitsTest.StackedModifications("Pippo", "Rossi")
-    
-    def test() {
-        
-        val test = new PrintTest("Traits")  
-        
+
+    def printOutput() {
+
+        val test = new ResultsPrinter("Traits")
+
         test += "This object speaks and dance:"
         test += classWTraits.speak
         test += classWTraits.dance
         test += "This one has a stackable (added, mixed) trait:"
         test += classWStackableTrait.name
-        
+
         test.print
     }
-    
+
 }

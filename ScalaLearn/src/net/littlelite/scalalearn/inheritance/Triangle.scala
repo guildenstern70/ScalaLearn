@@ -1,8 +1,8 @@
 /**
  * Scala Learn
- *  
- * Copyright (C) Alessio Saltarin - 2013 
- * 
+ *
+ * Copyright (C) Alessio Saltarin - 2013
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -15,7 +15,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  */
 
 package net.littlelite.scalalearn.inheritance
@@ -23,12 +23,11 @@ package net.littlelite.scalalearn.inheritance
 import ShapeType._
 
 class Triangle(
-        override val shapeName: String,
-        val shapeBase: Double,
-        val shapeHeight: Double
-        ) extends Shape(shapeName) {
-    
-    override def area: Double = { (this.shapeBase * this.shapeHeight) / 2.0f  } 
+    override val shapeName: String,
+    val shapeBase: Double,
+    val shapeHeight: Double) extends Shape(shapeName) {
+
+    override def area: Double = { (this.shapeBase * this.shapeHeight) / 2.0f }
     override def shapeType: ShapeType = ShapeType.Triangle
 
 }

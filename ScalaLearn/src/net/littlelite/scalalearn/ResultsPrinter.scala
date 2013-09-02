@@ -21,31 +21,31 @@ package net.littlelite.scalalearn
 
 import scala.collection.mutable.ListBuffer
 
-class PrintTest(testName: String) {
+class ResultsPrinter(testName: String) {
 
     val results = new ListBuffer[String]
 
     def +=(result: String) {
-        this.addResult(result)
+        ResultsPrinter.this.addResult(result)
     }
 
     def addResult(result: String) {
         results.append(result)
     }
 
-    def printSingleDetail(result: Any) {
-        this.addResult(result.toString)
-        this.print
+    def printDetail(result: Any) {
+        ResultsPrinter.this.addResult(result.toString)
+        ResultsPrinter.this.print
     }
 
     def printDetails(results: Iterator[Any]) {
-        results.foreach { i => this.addResult("> Value = %s".format(i.toString)) }
-        this.print
+        results.foreach { (i => ResultsPrinter.this.addResult("> Value = %s".format(i.toString))) }
+        ResultsPrinter.this.print
     }
 
     def print() {
 
-        val testOutput: List[String] = this.results.toList
+        val testOutput: List[String] = ResultsPrinter.this.results.toList
 
         def resultsString = testOutput.mkString(sys.props("line.separator"))
 

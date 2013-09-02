@@ -1,8 +1,8 @@
 /**
  * Scala Learn
- *  
- * Copyright (C) Alessio Saltarin - 2013 
- * 
+ *
+ * Copyright (C) Alessio Saltarin - 2013
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -15,29 +15,28 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  */
 package net.littlelite.scalalearn
 
-object MapForEachAndSoOn {
-    
+object MapForEachAndSoOn extends LearningModule {
+
     val numeri: List[Int] = List(1, 2, 3, 4, 5, 6)
-    
-    def numeriMapped() = numeri.map( x => x*2 )
-    
+
+    def numeriMapped() = numeri.map(x => x * 2)
+
     def numeriSum() = numeri.sum
-    
+
     def numeriForEach() = {
         var sum = 0
-        numeri.foreach( x => sum += x )
+        numeri.foreach(x => sum += x)
         sum
     }
-    
-    def test() {
-        new PrintTest("List Map").printDetails(numeriMapped().iterator)
-        new PrintTest("List Sum").printSingleDetail(numeriSum())
-        new PrintTest("List ForEach").printSingleDetail(numeriForEach())
+
+    def printOutput() {
+        new ResultsPrinter("List Map").printDetails(numeriMapped().iterator)
+        new ResultsPrinter("List Sum").printDetail(numeriSum())
+        new ResultsPrinter("List ForEach").printDetail(numeriForEach())
     }
-    
 
 }

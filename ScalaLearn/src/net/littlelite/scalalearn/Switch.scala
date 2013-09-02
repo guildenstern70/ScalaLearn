@@ -1,8 +1,8 @@
 /**
  * Scala Learn
- *  
- * Copyright (C) Alessio Saltarin - 2013 
- * 
+ *
+ * Copyright (C) Alessio Saltarin - 2013
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -15,24 +15,24 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  */
 package net.littlelite.scalalearn
 
 object Switch {
-    
+
     def tryMatch(any: Any): String = any match {
-        
+
         case 17 => "Seventeen"
         case true => "truth"
         case "hello" => "hi!"
         case Nil => "null"
         case _ => "something else"
-        
+
     }
-    
+
     def test() {
-        val test : PrintTest = new PrintTest("Match Test")
+        val test: PrintTest = new PrintTest("Match Test")
         test += this.tryMatch(17)
         test += this.tryMatch("hello")
         test += this.tryMatch("a dragon")

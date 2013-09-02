@@ -19,7 +19,7 @@
  */
 package net.littlelite.scalalearn
 
-object HighOrderFunction {
+object HighOrderFunction extends LearningModule {
     
     // Area pentagono: l*5* (l*0,688) / 2 = l^2 * 1,72
     // Area esagono: l * (l * 0,866) * 3 = l^2 * 2,598
@@ -32,13 +32,13 @@ object HighOrderFunction {
         areaCompute(lato)        
     }
     
-    def test() {
+    def printOutput() {
         
         val latoPentagono: Double = 5.0f
         val latoEsagono: Double = 6.0f
         
-        new PrintTest("HighOrder 1/2").printSingleDetail(polyAreaComputer(latoPentagono, pentagonoComputer))
-        new PrintTest("HighOrder 2/2").printSingleDetail(polyAreaComputer(latoEsagono, esagonoComputer))
+        new ResultsPrinter("HighOrder 1/2").printDetail(polyAreaComputer(latoPentagono, pentagonoComputer))
+        new ResultsPrinter("HighOrder 2/2").printDetail(polyAreaComputer(latoEsagono, esagonoComputer))
         
     }
 
