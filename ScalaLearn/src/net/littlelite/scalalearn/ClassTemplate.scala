@@ -19,22 +19,22 @@
  */
 package net.littlelite.scalalearn
 
-class ClassTemplate(name: String, surname: String) {
+class ClassTemplate(pName: String, pSurname: String) {
     
     // Constructor
-    protected val className = name;
-    protected val classSurname = surname;
-    
-    // Auxiliary constructor
-    def this() = this("Null", "Null")
+    protected val objName = pName;
+    protected val objSurname = pSurname;
     
     // Preconditions
-    require(name != null)
-    require(surname != null)
+    require(pName != null)
+    require(pSurname != null)
+    
+    // Auxiliary constructor
+    def this() = this("Unknown", "Unknown")
     
     // Properties
-    def nameOfClass: String = this.className
-    def surnameOfClass: String = this.classSurname
+    def name: String = this.objName
+    def surname: String = this.objSurname
     
     // Methods
     // Parameters are VAL not VAR
@@ -50,9 +50,9 @@ class ClassTemplate(name: String, surname: String) {
     override def toString() : String = {
         val sb = new StringBuilder()
         sb.append("Object of ClassWithFunctions = ")
-        sb.append(ClassTemplate.this.name)
+        sb.append(this.name)
         sb.append(' ')
-        sb.append(ClassTemplate.this.surname)
+        sb.append(this.surname)
         sb.toString
     }
     

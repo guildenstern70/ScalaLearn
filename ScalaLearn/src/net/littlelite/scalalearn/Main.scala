@@ -28,7 +28,7 @@ import net.littlelite.scalalearn.traits.TraitsTest
  */
 object Main {
   
-	final val VERSION = "v.0.1.3012" 
+	final val VERSION = "v.0.1.3023" 
     
     def main(args: Array[String]) {
     	println("ScalaLearn %s".format(VERSION))
@@ -43,6 +43,8 @@ object Main {
     	ShapesTest.test
     	TraitsTest.test
     	Switch.test
+    	
+    	println("=== END OF TESTS ===")
     }
 
 }
