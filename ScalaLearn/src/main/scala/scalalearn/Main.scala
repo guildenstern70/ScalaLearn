@@ -43,6 +43,7 @@ object Main {
         ShapesTest.printOutput
         TraitsTest.printOutput
         Arrays.printOutput
+        ForAndWhile.printOutput
         
         println()
         println("=== END ===")
