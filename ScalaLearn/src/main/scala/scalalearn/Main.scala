@@ -42,6 +42,7 @@ object Main {
         Currying.printOutput
         ShapesTest.printOutput
         TraitsTest.printOutput
+        Arrays.printOutput
         
         println()
         println("=== END ===")
