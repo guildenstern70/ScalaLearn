@@ -26,6 +26,8 @@ object MutableAndImmutableSet extends LearningModule {
     // Set => Depends on import: mutable or immutable
     // by default Set is immutable.
 
+    // A set is a collection that contains no duplicate elements.
+
     // MUTABLE => The collection can mutate (add or remove elements)
 
     // IMMUTABLE => The collection cannot mutate (even if you CAN STILL modify the

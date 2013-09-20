@@ -28,7 +28,7 @@ import scalalearn.traits.TraitsTest
  */
 object Main {
 
-    final val VERSION = "v.0.1.4040"
+    final val VERSION = "v.0.1.5050"
 
     def main(args: Array[String]) {
         println("ScalaLearn %s".format(VERSION))

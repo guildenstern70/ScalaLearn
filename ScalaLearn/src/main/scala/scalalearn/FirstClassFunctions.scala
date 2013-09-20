@@ -21,13 +21,20 @@ package scalalearn
 
 object FirstClassFunctions extends LearningModule {
 
+    // AreaDelCerchio is a function that takes one parameter of type Double
+    // and returns a Double
     val areaDelCerchio = (raggio: Double) => { raggio * raggio * Math.PI }
+    
+    // RemString is a function that takes no parameters and returns a String
+    val remString = () => { "REM" }
+    
 
     def printOutput() {
 
         val test = new ResultsPrinter("FIRST CLASS FUNCTION")
         val result = areaDelCerchio(10).toString
         test.addResult("> Circle area with radius = 10 => %s ".format(result))
+        test.addResult(remString + ": trial")
         test.print
 
     }

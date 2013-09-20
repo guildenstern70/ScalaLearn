@@ -37,10 +37,21 @@ object ListAndTuple extends LearningModule {
     myListBuilder.append(3)
     myListBuilder.append(4)
     val myList2 = myListBuilder.toList
+    
+    // Iterating lists
+    /* 
+
+        myList1.foreach( aNum =>
+            println(aNum)
+        )
+                	
+    */
 
     // Tuple => Immutable list of objects of different types
     val myTuple = (77, "Alessio", 345.7)
     // You may access elements with myTuple._1. Attention: tuple is one-based (myTuple._2 == "Alessio")
+    
+
 
     def printOutput {
 

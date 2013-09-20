@@ -19,29 +19,45 @@
  */
 package scalalearn
 
+/**
+ * In computer science, currying, invented by Moses Schonfinkel and Gottlob Frege, 
+ * is the technique of transforming a function that takes multiple arguments into a 
+ * function that takes a single argument  * (the other arguments having been 
+ * specified by the curry).
+ */
 object Currying extends LearningModule {
 
-    def printTestMessages(testName: String, messages: List[String])(joiner: List[String] => String) {
+    def formatTestMessages(messages: List[String])
+                          (joiner: () => String) : String = {
 
-        val resultsString = joiner(messages)
-
-        println()
-        println("** TEST %s **".format(testName))
-        println(resultsString)
-        println()
+        val strBuilder = new StringBuilder();
+        
+        for (message <- messages) {
+        	strBuilder.append(message)
+        	strBuilder.append(joiner())
+        }
+        	
+        strBuilder.toString
+        
     }
 
     def example() {
 
-        val messages = List("Ciao", "Mondo")
+        val messages = List("One", "Two", "Three")
+        
+        val dashSeparator = () => { " - " }
+        val blablaSeparator = () => { " [$$] " }
 
-        printTestMessages("Prova Test", messages) {
-            (messages: List[String]) => messages.mkString(sys.props("line.separator"))
-        }
+        println( formatTestMessages(messages) (dashSeparator) )
+        println( formatTestMessages(messages) (blablaSeparator) )
+     
     }
 
     def printOutput {
+        println
+        println("** TEST CURRYING **")
         this.example
+        println
     }
 
 }
