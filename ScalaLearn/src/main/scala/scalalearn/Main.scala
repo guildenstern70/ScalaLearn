@@ -31,6 +31,7 @@ object Main {
     final val VERSION = "v.0.1.5050"
 
     def main(args: Array[String]) {
+        
         println("ScalaLearn %s".format(VERSION))
 
         ListAndTuple.printOutput
@@ -46,7 +47,8 @@ object Main {
         ForAndWhile.printOutput
         
         println()
-        println("=== END ===")
+        println("All done. Bye.")
+        
     }
 
 }
