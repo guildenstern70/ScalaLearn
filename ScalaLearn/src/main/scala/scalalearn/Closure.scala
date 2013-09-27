@@ -29,6 +29,7 @@ object Closure extends LearningModule {
     val closure = (f: Int) => { someNumbers.filter(_ > f) }
 
     def printOutput() {
+        
         val test = new ResultsPrinter("CLOSURE")
         someNumbers = List(11, 10, 6, 10, 5, 10)
         val result = closure(5)
@@ -36,6 +37,7 @@ object Closure extends LearningModule {
             test.addResult("Value = %d".format(oInt))
         }
         test.print
+        
     }
 
 }

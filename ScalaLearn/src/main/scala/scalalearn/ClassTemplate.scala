@@ -19,6 +19,11 @@
  */
 package scalalearn
 
+/**
+ * A template for a common class in Scala
+ * @parameter pName: A parameter
+ * @parameter pSurname: Another parameter
+ */
 class ClassTemplate(pName: String, pSurname: String) {
 
     // Constructor

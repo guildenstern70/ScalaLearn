@@ -45,6 +45,7 @@ object Main {
         TraitsTest.printOutput
         Arrays.printOutput
         ForAndWhile.printOutput
+        PartiallyAppliedFunction.printOutput
         
         println()
         println("All done. Bye.")

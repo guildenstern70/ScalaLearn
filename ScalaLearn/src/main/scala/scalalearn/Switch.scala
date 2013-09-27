@@ -32,6 +32,7 @@ object Switch {
     }
 
     def test() {
+        
         val test: PrintTest = new PrintTest("Match Test")
         test += this.tryMatch(17)
         test += this.tryMatch("hello")
