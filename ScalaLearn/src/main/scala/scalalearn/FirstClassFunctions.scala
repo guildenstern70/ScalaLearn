@@ -21,26 +21,29 @@ package scalalearn
 
 object FirstClassFunctions extends LearningModule {
 
+    // FIRST CLASS FUNCTIONS
+    // A function is like any other value in Scala (first class).
+    // It can be passed to a function as a parameter
     // circleArea and squareArea are functions that takes one parameter of type Double
     // and returns a Double
     val circleArea = (radius: Double) => { radius * radius * Math.PI }
     val squareArea = (side: Double) => { side * side } 
     
     
-    // A first class function is a function that takes in input another function
-    def firstClassFunction( func: Double => Double, v: Double ) : String = {
-        
+   
+    // funcRun is a Higher Order Function
+    def funcRun( func: Double => Double, v: Double ) : String = {
         val result = func(v)
         result.toString();
-        
+
     }
     
 
     def printOutput() {
 
         val test = new ResultsPrinter("FIRST CLASS FUNCTION")
-        val result1 = this.firstClassFunction(circleArea, 10.0)
-        val result2 = this.firstClassFunction(squareArea, 10.0)
+        val result1 = this.funcRun(circleArea, 10.0)
+        val result2 = this.funcRun(squareArea, 10.0)
         test.addResult("> Circle area with radius = 10 => %s ".format(result1))
         test.addResult("> Square area with side = 10 => %s ".format(result2))
         test.print
