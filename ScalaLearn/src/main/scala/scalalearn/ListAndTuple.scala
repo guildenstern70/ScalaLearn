@@ -51,6 +51,9 @@ object ListAndTuple extends LearningModule {
     val myTuple = (77, "Alessio", 345.7)
     // You may access elements with myTuple._1. Attention: tuple is one-based (myTuple._2 == "Alessio")
     
+    // Iterating tuples
+    // iterator => myTuple.productIterator
+    // List[Any] => myTuple.productIterator.toList
 
 
     def printOutput {

@@ -28,23 +28,29 @@ object ForAndWhile extends LearningModule {
     val results2 = new ListBuffer[Int]()
     val results3 = new ListBuffer[Int]()
     val results4 = new ListBuffer[Int]()
+    val results5 = new ListBuffer[Int]()
     
     // Iterate over a list
     for (j <- someNumbers) {
         results1.append(j)
     }
     
+    // Indices: get item at without using a var...
+    for (k <- someNumbers.indices) {
+        results2.append(someNumbers(k))
+    }
+    
     // Classic for
     for (i <- 1 to 4) {
-    	results2.append(i)
+    	results3.append(i)
     }
     
     // Filtering
     for (
             i <- 1 until 20
             if (i % 2 == 0)
-    ) {
-        results3.append(i)
+    	) {
+        results4.append(i)
     }
     
     // While
@@ -54,14 +60,15 @@ object ForAndWhile extends LearningModule {
     	val temp = a
     	a = b % a
     	b = temp
-    	results4.append(b)
+    	results5.append(b)
     }
             
     def printOutput() {
         new ResultsPrinter("FOR 1/3").printDetails(results1.toList.iterator)
         new ResultsPrinter("FOR 2/3").printDetails(results2.toList.iterator)
         new ResultsPrinter("FOR 3/3").printDetails(results3.toList.iterator)
-        new ResultsPrinter("WHILE").printDetails(results4.toList.iterator)
+        new ResultsPrinter("FOR 3/3").printDetails(results4.toList.iterator)
+        new ResultsPrinter("WHILE").printDetails(results5.toList.iterator)
     }
 
 }

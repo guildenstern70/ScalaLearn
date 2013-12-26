@@ -17,41 +17,29 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package scalalearn.test
+ 
+package scalalearn.tests
 
 import org.scalatest.junit.JUnitSuite
-import org.scalatest.FunSuite
 import org.junit.Test
-import scalalearn.ListAndTuple
+import org.scalatest.junit.AssertionsForJUnit
+import org.junit.Assert._
+
 import scalalearn.ClassTemplate
 
 /**
- * A simple JUnit-style test class
+ * Class Template
  */
-class CollectionsSuite extends JUnitSuite  {
-
-    def iteratorTest(results: Iterator[Any], expectedResults: List[Any]) {
-        var j = 0
-        results.foreach { i =>
-            assert(i === expectedResults(j))
-            j += 1
-        }
-    }
+class ClassTemplateTest extends JUnitSuite  {
     
     @Test 
-    def ClassTemplateTest() {
+    def testClassTemplate() {
         
         val cTempl = new ClassTemplate("Alessio", "Saltarin")
-        assert(cTempl.name == "Alessio")
-        assert(cTempl.surname == "Saltarin")
+        assertEquals(cTempl.name, "Alessio")
+        assertEquals(cTempl.surname, "Saltarin")
         
     }
 
-    @Test
-    def CollectionsTest() {
 
-        val iterator1 = ListAndTuple.myList1.iterator
-        iteratorTest(iterator1, List(0, 1, 2, 3, 4))
-
-    }
 }
