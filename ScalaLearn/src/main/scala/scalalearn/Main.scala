@@ -21,6 +21,7 @@ package scalalearn
 
 import scalalearn.inheritance.ShapesTest
 import scalalearn.traits.TraitsTest
+import scala.collection.mutable.ListBuffer
 
 /**
  * Main application launcher
@@ -33,19 +34,23 @@ object Main {
     def main(args: Array[String]) {
         
         println("ScalaLearn %s".format(VERSION))
-
-        ListAndTuple.printOutput
-        MutableAndImmutableSet.printOutput
-        FirstClassFunctions.printOutput
-        Closure.printOutput
-        MapForEachAndSoOn.printOutput
-        HighOrderFunction.printOutput
-        Currying.printOutput
-        ShapesTest.printOutput
-        TraitsTest.printOutput
-        Arrays.printOutput
-        ForAndWhile.printOutput
-        PartiallyAppliedFunction.printOutput
+        
+        val tests = new ListBuffer[LearningModule]()
+        
+        tests.append(ListAndTuple)
+        tests.append(MutableAndImmutableSet)
+        tests.append(FirstClassFunctions)
+        tests.append(Closure)
+        tests.append(MapForEachAndSoOn)
+        tests.append(HighOrderFunction)
+        tests.append(Currying)
+        tests.append(ShapesTest)
+        tests.append(TraitsTest)
+        tests.append(Arrays)
+        tests.append(ForAndWhile)
+        tests.append(PartiallyAppliedFunction)
+                
+        tests.foreach( test => test.printOutput );
         
         println()
         println("All done. Bye.")
