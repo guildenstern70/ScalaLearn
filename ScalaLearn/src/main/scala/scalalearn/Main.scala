@@ -49,6 +49,7 @@ object Main {
         tests.append(Arrays)
         tests.append(ForAndWhile)
         tests.append(PartiallyAppliedFunction)
+        tests.append(new ClassTemplate("John", "Way"))
                 
         tests.foreach( test => test.printOutput );
         

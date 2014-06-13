@@ -24,7 +24,7 @@ package scalalearn
  * @parameter pName: A parameter
  * @parameter pSurname: Another parameter
  */
-class ClassTemplate(pName: String, pSurname: String) {
+class ClassTemplate(pName: String, pSurname: String) extends LearningModule {
 
     // Constructor
     protected val objName = pName;
@@ -50,15 +50,66 @@ class ClassTemplate(pName: String, pSurname: String) {
         else
             b
     }
+    
+    def printOutput() {
+        
+        println("\n** TEST ClassTemplate **")
+        println("Object of class ClassTemplate")
+        println("Object toString => " + this.toString)
+        println("Object hash => " + this.##)
+        
+        val th = new ClassTemplate("John", "Way")
+        if (this == th)
+        {
+            println("This object is equal to " + th.toString)
+        }
+        
+    }
 
-    // Overridden method
+    // Override 'Any' method: toString
     override def toString(): String = {
         val sb = new StringBuilder()
-        sb.append("Object of ClassWithFunctions = ")
+        sb.append('[')
         sb.append(this.name)
         sb.append(' ')
         sb.append(this.surname)
+        sb.append(']')
         sb.toString
     }
+    
+    // Override 'Any' method: equals (Any method '==' is final
+    // and cannot be overridden
+    override def equals(that: Any) = that match {
+	    case that: ClassTemplate => this.isEqualTo(that)
+	    case _ => false
+	  }
+    
+    
+    // Override 'Any' method: hashCode (Any method '##' is final
+    // and cannot be overridden
+    override def hashCode(): Int = {
+        var hash = 0
+        
+        for (c <- this.name)
+            hash += c
+            
+        for (c <- this.surname)
+            hash += c
+        
+        hash
+    }
+    
+    private def isEqualTo(that: ClassTemplate): Boolean = {
+        
+        var isEqual = false     
+        if (that.name.equalsIgnoreCase(this.name)) {
+            if (that.surname.equalsIgnoreCase(this.surname)) {
+                isEqual = true
+            }
+        }
+        isEqual
+  
+    }
+
 
 }
