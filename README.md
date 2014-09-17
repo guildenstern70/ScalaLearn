@@ -3,7 +3,7 @@
 A collection of simple source code examples in Scala, featuring key aspects of the language.
 
 
-##BUILD WITH SBT
+##Build with SBT
 
 1. Download 'sbt' here: http://www.scala-sbt.org/download.html
 2. Install sbt package
