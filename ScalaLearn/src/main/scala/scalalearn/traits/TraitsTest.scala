@@ -35,21 +35,32 @@ object TraitsTest extends LearningModule {
 
     }
 
-    class StackedModifications(smName: String, smSurname: String)
-        extends ClassTemplate(smName, smSurname) with StackableTrait
+    // Class template is a class with a name and a surname
+    // The Stackable Traits in 'StackableTrait' modify the name,
+    // by adding 'XXX' and 'YYY' to the name,
+    // Here you can see how we can 'Stack' the traits together
+    class ClassTemplateWithXXX(smName: String, smSurname: String)
+        extends ClassTemplate(smName, smSurname) with AddXXXStackableTrait
+    
+    // Try to invert the traits here!
+    // (order is important!!)    
+    class ClassTemplateWithXXXandYYY(smName: String, smSurname: String)
+        extends ClassTemplate(smName, smSurname) with AddYYYStackableTrait with AddXXXStackableTrait
 
-    val classWTraits = new TraitsTest.ClassWithTraits
-    val classWStackableTrait = new TraitsTest.StackedModifications("Pippo", "Rossi")
+    val objectWithTraits = new TraitsTest.ClassWithTraits
+    val firstObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXX("Pippo", "Rossi")
+    val secondObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXXandYYY("Pippo", "Rossi")
 
     def printOutput() {
 
         val test = new ResultsPrinter("Traits")
 
         test += "This object speaks and dance:"
-        test += classWTraits.speak
-        test += classWTraits.dance
-        test += "This one has a stackable (added, mixed) trait:"
-        test += classWStackableTrait.name
+        test += objectWithTraits.speak
+        test += objectWithTraits.dance
+        test += "This one has a stackable (added, mixed) traits:"
+        test += firstObjWithStackedTraits.name
+        test += secondObjWithStackedTraits.name
 
         test.print
     }
