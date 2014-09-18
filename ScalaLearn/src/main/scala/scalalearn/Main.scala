@@ -29,7 +29,7 @@ import scala.collection.mutable.ListBuffer
  */
 object Main {
 
-    final val VERSION = "v.0.2.1024"
+    final val VERSION = "v.0.3.1007"
 
     def main(args: Array[String]) {
         
@@ -49,6 +49,7 @@ object Main {
         tests.append(Arrays)
         tests.append(ForAndWhile)
         tests.append(PartiallyAppliedFunction)
+        tests.append(CaseClasses)
         tests.append(new ClassTemplate("John", "Way"))
                 
         tests.foreach( test => test.printOutput );
