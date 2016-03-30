@@ -25,26 +25,26 @@ object ForAndWhile extends LearningModule {
 
   val someNumbers = Array(1, 2, 3, 4, 5)
   var results = new ListBuffer[Int]()
-  var testName: String = "";
+  var testName: String = ""
 
   // Iterate over a list
   // var j; can be omitted!
   for (j <- someNumbers) {
     results.append(j)
   }
-  this.printOutput("FOR #1");
+  this.printOutput("FOR #1")
 
   // Indices: get item at without using a var...
   for (k <- someNumbers.indices) {
     results.append(someNumbers(k))
   }
-  this.printOutput("FOR #2");
+  this.printOutput("FOR #2")
 
   // Classic for
-  for (i <- 1 to 4) {
+  for (i <- 10 to 20 by 2) {
     results.append(i)
   }
-  this.printOutput("FOR #3");
+  this.printOutput("FOR #3")
 
   // Yielding
   val ints = for (a <- someNumbers) yield (a * 2);
@@ -57,7 +57,7 @@ object ForAndWhile extends LearningModule {
   ) {
     results.append(i)
   }
-  this.printOutput("FILTER");
+  this.printOutput("FILTER")
 
   // While
   var a = 150
@@ -68,7 +68,7 @@ object ForAndWhile extends LearningModule {
     b = temp
     results.append(b)
   }
-  this.printOutput("WHILE");
+  this.printOutput("WHILE")
   
   def printOutput() {
     new ResultsPrinter(this.testName + " -> ").printDetails(this.results.toList.iterator);
@@ -77,7 +77,7 @@ object ForAndWhile extends LearningModule {
 
   def printOutput(testName: String) {
     this.testName = testName;
-    this.printOutput();
+    this.printOutput()
   }
 
 }
