@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,8 +35,8 @@ object Arrays extends LearningModule {
     var myArray2: Array[String] = Array.fill[String](2)("")
     myArray2(0) = "Alessio"
     myArray2(1) = "Saltarin"
-        
-    def printOutput() {
+
+    def printOutput {
         new ResultsPrinter("ARRAY 1/2").printDetails(myArray1.iterator)
         new ResultsPrinter("ARRAY 2/2").printDetails(myArray2.iterator)
     }

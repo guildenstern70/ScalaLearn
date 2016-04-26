@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ object MapForEachAndSoOn extends LearningModule {
         sum
     }
 
-    def printOutput() {
+    def printOutput {
         new ResultsPrinter("List Map").printDetails(numeriMapped().iterator)
         new ResultsPrinter("List Sum").printDetail(numeriSum())
         new ResultsPrinter("List ForEach").printDetail(numeriForEach())

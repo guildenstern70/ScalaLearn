@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,12 +23,12 @@ object Closure extends LearningModule {
 
     var someNumbers = List(11, 10, 5, 0, 5, 10)
 
-    // Closure: the variabile 'someNumbers' is FREE.
+    // Closure: the variable 'someNumbers' is FREE.
     // When "closure" it's called, it takes the most recent
     // value of someNumbers
     val closure = (f: Int) => { someNumbers.filter(_ > f) }
 
-    def printOutput() {
+    def printOutput {
         
         val test = new ResultsPrinter("CLOSURE")
         someNumbers = List(11, 10, 6, 10, 5, 10)
@@ -36,7 +36,7 @@ object Closure extends LearningModule {
         for (oInt <- result) {
             test.addResult("Value = %d".format(oInt))
         }
-        test.print
+        test.print()
         
     }
 

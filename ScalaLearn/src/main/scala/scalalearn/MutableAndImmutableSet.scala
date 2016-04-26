@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -41,11 +41,11 @@ object MutableAndImmutableSet extends LearningModule {
     def printOutput {
 
         val test = new ResultsPrinter("SET")
-        val jetSetVal = this.jetSet;
+        val jetSetVal = this.jetSet
         for (s <- jetSetVal) {
             test.addResult("> Value = %s".format(s))
         }
-        test.print
+        test.print()
     }
 
 }

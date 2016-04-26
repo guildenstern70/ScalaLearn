@@ -1,7 +1,26 @@
+/**
+  * Scala Learn
+  *
+  * Copyright (C) Alessio Saltarin - 2013-16
+  *
+  * This program is free software: you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+  * the Free Software Foundation, either version 3 of the License, or
+  * (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  * GNU General Public License for more details.
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  *
+  */
 package scalalearn
 
 object CaseClasses extends LearningModule {
-  
+
   // Case class.
   //
   // 1. No need to instantiate with 'new'
@@ -25,15 +44,15 @@ object CaseClasses extends LearningModule {
   def printOutput {
     
     val results = new ResultsPrinter("CASE CLASSES")
-    results += "Class name = " + CaseClasses.maria.toString()
-    results += "Class name = " + CaseClasses.elena.toString()
-    results += "Hash Code = " + CaseClasses.maria.hashCode()
+    results += "Class name = " + CaseClasses.maria.toString
+    results += "Class name = " + CaseClasses.elena.toString
+    results += "Hash Code = " + CaseClasses.maria.hashCode
     results += "Name = "+ CaseClasses.elena.name
     results += this.whoWas(this.maria)
     results += this.whoWas(this.elena)
     results.print()
       
   }
-  
+
 
 }

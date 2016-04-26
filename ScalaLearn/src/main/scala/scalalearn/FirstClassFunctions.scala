@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,19 +34,19 @@ object FirstClassFunctions extends LearningModule {
     // funcRun is a Higher Order Function
     def funcRun( func: Double => Double, v: Double ) : String = {
         val result = func(v)
-        result.toString();
+        result.toString
 
     }
-    
 
-    def printOutput() {
+
+    def printOutput {
 
         val test = new ResultsPrinter("FIRST CLASS FUNCTION")
         val result1 = this.funcRun(circleArea, 10.0)
         val result2 = this.funcRun(squareArea, 10.0)
         test.addResult("> Circle area with radius = 10 => %s ".format(result1))
         test.addResult("> Square area with side = 10 => %s ".format(result2))
-        test.print
+        test.print()
 
     }
 

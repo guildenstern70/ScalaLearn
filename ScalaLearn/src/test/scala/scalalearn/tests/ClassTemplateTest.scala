@@ -1,7 +1,7 @@
 /**
  * Scala Learn Tests
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,13 +19,6 @@
  */
  
 package scalalearn.tests
-
-import org.scalatest.junit.JUnitSuite
-import org.junit.Test
-import org.scalatest.junit.AssertionsForJUnit
-import org.junit.Assert._
-
-import scalalearn.ClassTemplate
 
 /**
  * Class Template

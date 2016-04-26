@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -37,7 +37,7 @@ object Switch {
         test += this.tryMatch(17)
         test += this.tryMatch("hello")
         test += this.tryMatch("a dragon")
-        test.print
+        test.print()
     }
 
 }

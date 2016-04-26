@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,8 +19,6 @@
  */
 package scalalearn
 
-import scala.collection.mutable.ListBuffer
-
 class PrintTest(testName: String) {
 
     val results = new ListBuffer[String]
@@ -35,12 +33,12 @@ class PrintTest(testName: String) {
 
     def printSingleDetail(result: Any) {
         this.addResult(result.toString)
-        this.print
+        this.print()
     }
 
     def printDetails(results: Iterator[Any]) {
         results.foreach { i => this.addResult("> Value = %s".format(i.toString)) }
-        this.print
+        this.print()
     }
 
     def print() {

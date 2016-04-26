@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-14
+  * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,21 +19,17 @@
  */
 package scalalearn
 
-import scalalearn.inheritance.ShapesTest
-import scalalearn.traits.TraitsTest
-import scala.collection.mutable.ListBuffer
-
 /**
  * Main application launcher
  *
  */
 object Main {
 
-    final val VERSION = "v.0.3.1007"
+    final val VERSION = "v.0.3.1025"
 
     def main(args: Array[String]) {
-        
-        println("ScalaLearn %s".format(VERSION))
+
+        println("ScalaLearn %VERSION")
         
         val tests = new ListBuffer[LearningModule]()
         
@@ -51,8 +47,8 @@ object Main {
         tests.append(PartiallyAppliedFunction)
         tests.append(CaseClasses)
         tests.append(new ClassTemplate("John", "Way"))
-                
-        tests.foreach( test => test.printOutput );
+
+        tests.foreach(test => test.printOutput)
         
         println()
         println("All done. Bye.")
