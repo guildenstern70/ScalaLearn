@@ -1,0 +1,23 @@
+apply plugin: 'scala'
+apply plugin: 'application'
+
+mainClassName = "scalalearn.Main"
+
+repositories {
+	mavenCentral()
+	maven {
+		url "https://oss.sonatype.org/content/groups/public/org/scalatest/"
+	}
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.8'
+    testCompile 'org.scalatest:scalatest_2.11:2.2.6'
+	testCompile 'junit:junit:4.+'
+}
+
+
+
+
+
+
