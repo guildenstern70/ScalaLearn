@@ -19,8 +19,12 @@
  */
 package scalalearn
 
-//import scala.collection.mutable.Set;
+//import scala.collection.mutable.Set;  //## DO NOT REMOVE THIS LINE!
 
+/**
+  * Sets are collection of unique objects.
+  * They can be mutable or immutable
+  */
 object MutableAndImmutableSet extends LearningModule {
 
     // Set => Depends on import: mutable or immutable
@@ -37,6 +41,9 @@ object MutableAndImmutableSet extends LearningModule {
 
     var jetSet: Set[String] = Set(s1, s2)
     jetSet += "Lear"
+
+    // Number of elements in a size
+    val len = jetSet.size
 
     def printOutput {
 

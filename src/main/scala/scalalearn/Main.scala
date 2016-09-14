@@ -34,25 +34,26 @@ object Main {
     def main(args: Array[String]) {
 
         println("ScalaLearn %VERSION")
-        
-        val tests = new ListBuffer[LearningModule]()
-        
-        tests.append(ListAndTuple)
-        tests.append(MutableAndImmutableSet)
-        tests.append(FirstClassFunctions)
-        tests.append(Closure)
-        tests.append(MapForEachAndSoOn)
-        tests.append(HighOrderFunction)
-        tests.append(Currying)
-        tests.append(ShapesTest)
-        tests.append(TraitsTest)
-        tests.append(Arrays)
-        tests.append(ForAndWhile)
-        tests.append(PartiallyAppliedFunction)
-        tests.append(CaseClasses)
-        tests.append(new ClassTemplate("John", "Way"))
+        println("")
 
-        tests.foreach(test => test.printOutput)
+        val useCases = new ListBuffer[LearningModule]()
+
+        useCases.append(ListAndTuple)
+        useCases.append(MutableAndImmutableSet)
+        useCases.append(FirstClassFunctions)
+        useCases.append(Closure)
+        useCases.append(MapForEachAndSoOn)
+        useCases.append(HighOrderFunction)
+        useCases.append(Currying)
+        useCases.append(ShapesTest)
+        useCases.append(TraitsTest)
+        useCases.append(Arrays)
+        useCases.append(ForAndWhile)
+        useCases.append(PartiallyAppliedFunction)
+        useCases.append(CaseClasses)
+        useCases.append(new ClassTemplate("John", "Way"))
+
+        useCases.foreach(useCase => useCase.printOutput)
         
         println()
         println("All done. Bye.")

@@ -22,23 +22,25 @@ package scalalearn.tests
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.scalatest.junit.JUnitSuite
+import org.junit.runner.RunWith
+import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.junit.JUnitRunner
 
 import scalalearn.ClassTemplate
 
 /**
  * Class Template
  */
-class ClassTemplateTest extends JUnitSuite  {
-    
-    @Test 
-    def testClassTemplate() {
+@RunWith(classOf[JUnitRunner])
+class ClassTemplateTest extends FlatSpec with Matchers {
+
+    "Class Attributes" should "contain expected values" in {
         
         val cTempl = new ClassTemplate("Alessio", "Saltarin")
-        assertEquals(cTempl.name, "Alessio")
-        assertEquals(cTempl.surname, "Saltarin")
-        
-    }
 
+        cTempl.name should be ("Alessio")
+        cTempl.surname should be ("Saltarin")
+
+    }
 
 }

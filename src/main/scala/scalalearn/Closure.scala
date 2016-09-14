@@ -19,6 +19,11 @@
  */
 package scalalearn
 
+/**
+  * A closure is a persistent scope which holds on
+  * to local variables even after the code execution
+  * has moved out of that block.
+  */
 object Closure extends LearningModule {
 
     var someNumbers = List(11, 10, 5, 0, 5, 10)
@@ -31,7 +36,6 @@ object Closure extends LearningModule {
     def printOutput {
         
         val test = new ResultsPrinter("CLOSURE")
-        someNumbers = List(11, 10, 6, 10, 5, 10)
         val result = closure(5)
         for (oInt <- result) {
             test.addResult("Value = %d".format(oInt))

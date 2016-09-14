@@ -19,24 +19,27 @@
  */
 package scalalearn
 
+/**
+  * Basic list handlers in functional style
+  */
 object MapForEachAndSoOn extends LearningModule {
 
-    val numeri: List[Int] = List(1, 2, 3, 4, 5, 6)
+    val someNumbers: List[Int] = List(1, 2, 3, 4, 5, 6)
 
-    def numeriMapped() = numeri.map(x => x * 2)
+    def numbersMap() = someNumbers.map(x => x * 2)
 
-    def numeriSum() = numeri.sum
+    def numbersSum() = someNumbers.sum
 
-    def numeriForEach() = {
+    def eachNumber() = {
         var sum = 0
-        numeri.foreach(x => sum += x)
+        someNumbers.foreach(x => sum += x)
         sum
     }
 
     def printOutput {
-        new ResultsPrinter("List Map").printDetails(numeriMapped().iterator)
-        new ResultsPrinter("List Sum").printDetail(numeriSum())
-        new ResultsPrinter("List ForEach").printDetail(numeriForEach())
+        new ResultsPrinter("List Map").printDetails(numbersMap().iterator)
+        new ResultsPrinter("List Sum").printDetail(numbersSum())
+        new ResultsPrinter("List ForEach").printDetail(eachNumber())
     }
 
 }

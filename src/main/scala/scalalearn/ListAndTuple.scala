@@ -21,6 +21,10 @@ package scalalearn
 
 import scala.collection.mutable.ListBuffer
 
+/**
+  * List and Tuples.
+  * Object collections.
+  */
 object ListAndTuple extends LearningModule {
 
     // List => Immutable collection of objects of the same type
@@ -29,6 +33,9 @@ object ListAndTuple extends LearningModule {
     // Building List => First way: prepend / append directly
     myList1 = 0 :: myList1 // Prepend OK
     myList1 = myList1 :+ 4 // Append Slow!
+
+    // Number of elements
+    val len = myList1.length
 
     // Building List => Second way: using ListBuffer
     val myListBuilder = new ListBuffer[Int]()

@@ -19,6 +19,9 @@
  */
 package scalalearn
 
+/**
+  * Functions are First Class Citizens
+  */
 object FirstClassFunctions extends LearningModule {
 
     // FIRST CLASS FUNCTIONS
@@ -28,10 +31,9 @@ object FirstClassFunctions extends LearningModule {
     // and returns a Double
     val circleArea = (radius: Double) => { radius * radius * Math.PI }
     val squareArea = (side: Double) => { side * side } 
-    
-    
-   
-    // funcRun is a Higher Order Function
+
+    // funcRun is a Higher Order Function:
+    // since it accepts a function as parameter
     def funcRun( func: Double => Double, v: Double ) : String = {
         val result = func(v)
         result.toString

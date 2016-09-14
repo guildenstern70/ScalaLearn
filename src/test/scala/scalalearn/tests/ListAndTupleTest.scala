@@ -1,47 +1,33 @@
 package scalalearn.tests
 
-import org.junit.Assert._
-import org.junit.Test
-import org.scalatest.junit.JUnitSuite
+import org.junit.runner.RunWith
+import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.junit.JUnitRunner
 
 import scalalearn.ListAndTuple
 
 
-class ListAndTupleTest extends JUnitSuite {
-    
-    @Test
-    def testList1() {
+@RunWith(classOf[JUnitRunner])
+class ListAndTupleTest extends FlatSpec with Matchers {
 
-        TestUtils.iteratorTest(ListAndTuple.myList1, List(0, 1, 2, 3, 4))
 
-    }
-    
-    @Test
-    def testList2() {
+    "The #1 list" should "contain expected values" in {
 
-        TestUtils.iteratorTest(ListAndTuple.myList2, List(1, 2, 3, 4))
+        ListAndTuple.myList1 should be (List(0, 1, 2, 3, 4))
 
     }
-    
-    @Test
-    def testTuple() {
 
-        val oneT = ListAndTuple.myTuple._1
-        val twoT = ListAndTuple.myTuple._2
-        val threeT = ListAndTuple.myTuple._3
-        
-        val oneE: Int = 77
-        val twoE: String = "Alessio"
-        val threeE: Double = 345.7
-        
-        val oneMsg = "%s should be equal to %s".format(oneT.toString, oneE.toString)
-        val twoMsg = "%s should be equal to %s".format(twoT.toString, twoE.toString)
-        val threeMsg = "%s should be equal to %s".format(threeT.toString, threeE.toString)
-        
-        assertEquals(oneMsg, oneT, oneE)
-        assertEquals(twoMsg, twoT, twoE)
-        assertEquals(threeMsg, threeT, threeE, 0.01)
-        
+    "The #2 list" should "contain expected values" in {
+
+        ListAndTuple.myList2 should be (List(1, 2, 3, 4))
+
+    }
+
+    "The tuple" should "contain expected values" in {
+
+        ListAndTuple.myTuple._1 should be (77)
+        ListAndTuple.myTuple._2 should be ("Alessio")
+        ListAndTuple.myTuple._3 should be (345.7)
 
     }
     
