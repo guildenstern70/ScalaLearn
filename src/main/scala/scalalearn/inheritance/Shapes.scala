@@ -22,7 +22,7 @@ package scalalearn.inheritance
 
 import scalalearn.LearningModule
 
-object ShapesTest extends LearningModule {
+object Shapes extends LearningModule {
 
     def printOutput {
 

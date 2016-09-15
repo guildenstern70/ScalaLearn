@@ -19,7 +19,7 @@
 package scalalearn
 
 import scala.collection.mutable.ListBuffer
-import scalalearn.inheritance.ShapesTest
+import scalalearn.inheritance.Shapes
 import scalalearn.traits.TraitsTest
 
 /**
@@ -44,7 +44,7 @@ object Main {
         useCases.append(MapForEachAndSoOn)
         useCases.append(HighOrderFunction)
         useCases.append(Currying)
-        useCases.append(ShapesTest)
+        useCases.append(Shapes)
         useCases.append(TraitsTest)
         useCases.append(Arrays)
         useCases.append(ForAndWhile)

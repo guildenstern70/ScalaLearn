@@ -20,11 +20,9 @@
  
 package scalalearn.tests
 
-import org.junit.Assert.assertEquals
-import org.junit.Test
 import org.junit.runner.RunWith
-import org.scalatest.{FlatSpec, Matchers}
 import org.scalatest.junit.JUnitRunner
+import org.scalatest.{FlatSpec, Matchers}
 
 import scalalearn.ClassTemplate
 

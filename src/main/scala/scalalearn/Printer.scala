@@ -21,7 +21,7 @@ package scalalearn
 
 import scala.collection.mutable.ListBuffer
 
-class PrintTest(testName: String) {
+class Printer(testName: String) {
 
     val results = new ListBuffer[String]
 
@@ -44,11 +44,8 @@ class PrintTest(testName: String) {
     }
 
     def print() {
-
         val testOutput: List[String] = this.results.toList
-
         def resultsString = testOutput.mkString(sys.props("line.separator"))
-
         println()
         println("** TEST %s **".format(testName))
         println(resultsString)

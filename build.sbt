@@ -2,7 +2,7 @@ name := "Scala Learn"
 
 version := "0.3"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.11.8"
 
 mainClass := Some("scalalearn.Main")
 
