@@ -22,20 +22,20 @@ package scalalearn
 object CaseClasses extends LearningModule {
 
     val maria = Persona(surname = "Callas", name = "Maria")
-  val elena = maria.copy("Elena")
+    val elena = maria.copy("Elena")
 
-  def printOutput {
+    def printOutput {
 
       val results = new ResultsPrinter("CASE CLASSES")
-    results += "Class name = " + CaseClasses.maria.toString
-    results += "Class name = " + CaseClasses.elena.toString
-    results += "Hash Code = " + CaseClasses.maria.hashCode
-    results += "Name = "+ CaseClasses.elena.name
-    results += this.whoWas(this.maria)
-    results += this.whoWas(this.elena)
-    results.print()
+        results += "Class name = " + CaseClasses.maria.toString
+        results += "Class name = " + CaseClasses.elena.toString
+        results += "Hash Code = " + CaseClasses.maria.hashCode
+        results += "Name = " + CaseClasses.elena.name
+        results += this.whoWas(this.maria)
+        results += this.whoWas(this.elena)
+        results.print()
 
-  }
+    }
 
     def whoWas(p: Persona): String = p.name + " " + p.surname + this.matchingPersona(p)
 

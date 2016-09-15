@@ -1,6 +1,5 @@
 /**
  * Scala Learn
- *
   * Copyright (C) Alessio Saltarin - 2013-16
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,7 +32,7 @@ object Main {
 
     def main(args: Array[String]) {
 
-        println("ScalaLearn %VERSION")
+        println(s"ScalaLearn $VERSION")
         println("")
 
         val useCases = new ListBuffer[LearningModule]()
