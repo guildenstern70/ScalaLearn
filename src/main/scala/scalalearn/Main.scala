@@ -51,6 +51,7 @@ object Main {
         useCases.append(PartiallyAppliedFunction)
         useCases.append(CaseClasses)
         useCases.append(new ClassTemplate("John", "Way"))
+        useCases.append(Options)
 
         useCases.foreach(useCase => useCase.printOutput)
         
