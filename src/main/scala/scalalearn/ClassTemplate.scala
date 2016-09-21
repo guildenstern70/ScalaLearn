@@ -101,9 +101,7 @@ class ClassTemplate(pName: String, pSurname: String)
     // Getters and setters
     private var _position = "Unknown"
 
-    def position = _position
-
-    // Getter
+    def position = _position  // Getter
     def position_=(value: String): Unit = _position = value // Setter
 
     // Override 'Any' method: hashCode (Any method '##' is final
