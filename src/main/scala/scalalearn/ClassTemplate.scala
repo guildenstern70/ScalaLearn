@@ -99,6 +99,7 @@ class ClassTemplate(pName: String, pSurname: String)
     def surname: String = this.objSurname
 
     // Getters and setters
+    // NOTE: both getter and setter must be present in order to work!
     private var _position = "Unknown"
 
     def position = _position  // Getter
