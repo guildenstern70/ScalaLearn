@@ -96,9 +96,16 @@ class ClassTemplate(pName: String, pSurname: String)
 
     // Properties
     def name: String = this.objName
-
     def surname: String = this.objSurname
-    
+
+    // Getters and setters
+    private var _position = "Unknown"
+
+    def position = _position
+
+    // Getter
+    def position_=(value: String): Unit = _position = value // Setter
+
     // Override 'Any' method: hashCode (Any method '##' is final
     // and cannot be overridden
     override def hashCode(): Int = {
@@ -112,6 +119,8 @@ class ClassTemplate(pName: String, pSurname: String)
 
         hash
     }
+
+    // Static Methods: SCALA HAS NO STATIC METHODS IN CLASSES! Use 'object' as a factory...
 
 
 }
