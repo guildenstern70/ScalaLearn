@@ -52,6 +52,7 @@ object Main {
         useCases.append(CaseClasses)
         useCases.append(new ClassTemplate("John", "Way"))
         useCases.append(Options)
+        useCases.append(Collections)
 
         useCases.foreach(useCase => useCase.printOutput)
         
