@@ -1,13 +1,27 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath group: 'org.github.ngbinh.scalastyle', name: 'gradle-scalastyle-plugin_2.10', version: '0.8.2'
+	}
+}
+
 apply plugin: 'scala'
 apply plugin: 'application'
+apply plugin: 'scalaStyle'
 
 mainClassName = "scalalearn.Main"
 
+scalaStyle {
+	configLocation = "src/main/resources/scalastyle_config.xml"
+	includeTestSourceDirectory = true
+	source = "src/main/scala"
+	testSource = "src/test/scala"
+}
+
 repositories {
 	mavenCentral()
-	maven {
-		url "https://oss.sonatype.org/content/groups/public/org/scalatest/"
-	}
 }
 
 dependencies {

@@ -28,6 +28,8 @@ object MapForEachAndSoOn extends LearningModule {
 
     def numbersMap() = someNumbers.map(x => x * 2)
 
+    def numbersMapShortcut() = someNumbers.map( _ * 2 )
+
     def numbersSum() = someNumbers.sum
 
     def eachNumber() = {
