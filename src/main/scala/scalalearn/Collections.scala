@@ -16,6 +16,7 @@ object Collections extends LearningModule
 
      */
 
+    /* Immutable: cannot add elements */
     val dictionary : Map[Int, String] = Map(
 
         1 -> "AAA",
@@ -32,8 +33,12 @@ object Collections extends LearningModule
         println("1 key does not exist")
     }
 
-    // Get 3rd element
     val third = dictionary.keys.drop(2).head
+
+    /* Mutable: you can add elements */
+    val mutableDictionary = collection.mutable.Map.empty[Int, String]
+    mutableDictionary += 1 -> "XXX"
+    mutableDictionary += 2 -> "YYY"
 
     def printOutput {
 
