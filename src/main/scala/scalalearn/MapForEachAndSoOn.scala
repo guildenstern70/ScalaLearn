@@ -26,13 +26,13 @@ object MapForEachAndSoOn extends LearningModule {
 
     val someNumbers: List[Int] = List(1, 2, 3, 4, 5, 6)
 
-    def numbersMap() = someNumbers.map(x => x * 2)
+    def numbersMap(): List[Int] = someNumbers.map(x => x * 2)
 
-    def numbersMapShortcut() = someNumbers.map( _ * 2 )
+    def numbersMapShortcut(): List[Int] = someNumbers.map( _ * 2 )
 
-    def numbersSum() = someNumbers.sum
+    def numbersSum(): Int = someNumbers.sum
 
-    def eachNumber() = {
+    def eachNumber(): Int = {
         var sum = 0
         someNumbers.foreach(x => sum += x)
         sum

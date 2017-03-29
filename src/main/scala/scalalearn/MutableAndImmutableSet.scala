@@ -43,7 +43,7 @@ object MutableAndImmutableSet extends LearningModule {
     jetSet += "Lear"
 
     // Number of elements in a size
-    val len = jetSet.size
+    val len: Int = jetSet.size
 
     def printOutput {
 
