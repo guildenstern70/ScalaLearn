@@ -1,6 +1,6 @@
 /**
  * Scala Learn
-  * Copyright (C) Alessio Saltarin - 2013-16
+  * Copyright (C) Alessio Saltarin - 2013-17
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -53,8 +53,9 @@ object Main {
         useCases.append(new ClassTemplate("John", "Way"))
         useCases.append(Options)
         useCases.append(Collections)
+        useCases.append(Implicits)
 
-        useCases.foreach(useCase => useCase.printOutput)
+        useCases.foreach(_.printOutput)
         
         println()
         println("All done. Bye.")
