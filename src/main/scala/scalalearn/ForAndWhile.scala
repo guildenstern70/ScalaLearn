@@ -47,7 +47,7 @@ object ForAndWhile extends LearningModule {
   this.printOutput("FOR #3")
 
   // Yielding
-  val ints = for (a <- someNumbers) yield a * 2;
+  val ints = for (a <- someNumbers) yield a * 2
   this.results = ints.to[ListBuffer]; // !! Brilliant conversion!
   this.printOutput("YIELD")
 

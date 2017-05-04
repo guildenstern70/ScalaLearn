@@ -39,6 +39,11 @@ object Collections extends LearningModule
     mutableDictionary += 1 -> "XXX"
     mutableDictionary += 2 -> "YYY"
 
+    /* Set: collection of unique items */
+    val mutableSet = collection.mutable.Set.empty[String]
+    mutableSet += "AAA"
+    mutableSet += "BBB"
+
     def printOutput {
 
         val test = new ResultsPrinter("COLLECTIONS (MAPS)")
