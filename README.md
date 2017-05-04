@@ -1,10 +1,10 @@
-#ScalaLearn
+# ScalaLearn
 
 [![Run Status](https://api.shippable.com/projects/590adb9086175d070061b8a1/badge?branch=master)](https://app.shippable.com/github/guildenstern70/ScalaLearn)
 
 A collection of simple source code examples in Scala, featuring key aspects of the language.
 
-##Build with Gradle
+## Build with Gradle
 
 1. Download 'gradle' here: http://www.gradle.org/downloads
 2. Extract Gradle and add 'bin\' to path
@@ -14,7 +14,7 @@ A collection of simple source code examples in Scala, featuring key aspects of t
 6. Run with 'gradle run'
 7. Run tests with 'gradle check'
 
-##Build with SBT
+## Build with SBT
 
 1. Download 'sbt' here: http://www.scala-sbt.org/download.html
 2. Install sbt package
