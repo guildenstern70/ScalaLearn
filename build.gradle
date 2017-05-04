@@ -22,6 +22,10 @@ scalaStyle {
 	testSource = "src/test/scala"
 }
 
+test {
+	reports.junitXml.destination = file('shippable/testresults')
+}
+
 repositories {
 	mavenCentral()
 }
