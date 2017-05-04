@@ -24,8 +24,8 @@ object HighOrderFunction extends LearningModule {
     // Area pentagono: l*5* (l*0,688) / 2 = l^2 * 1,72
     // Area esagono: l * (l * 0,866) * 3 = l^2 * 2,598
     
-    val pentagonoComputer = (lato: Double) => { lato * lato * 1.72f }
-    val esagonoComputer = (lato: Double) => { lato * lato * 2.598f }
+    val pentagonoComputer: (Double) => Double = (lato: Double) => { lato * lato * 1.72f }
+    val esagonoComputer: (Double) => Double = (lato: Double) => { lato * lato * 2.598f }
     
      // polyAreaComputer is a higher class function: a function that takes in input another function
     def polyAreaComputer(lato: Double, 

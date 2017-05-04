@@ -31,7 +31,7 @@ object Closure extends LearningModule {
     // Closure: the variable 'someNumbers' is FREE.
     // When "closure" it's called, it takes the most recent
     // value of someNumbers
-    val closure = (f: Int) => { someNumbers.filter(_ > f) }
+    val closure: (Int) => List[Int] = (f: Int) => { someNumbers.filter(_ > f) }
 
     def printOutput {
         

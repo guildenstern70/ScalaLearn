@@ -22,7 +22,7 @@ package scalalearn
 object CaseClasses extends LearningModule {
 
     val maria = Persona(surname = "Callas", name = "Maria")
-    val elena = maria.copy("Elena")
+    val elena: Persona = maria.copy("Elena")
 
     def printOutput {
 

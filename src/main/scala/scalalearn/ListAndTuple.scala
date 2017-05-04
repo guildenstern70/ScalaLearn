@@ -35,7 +35,7 @@ object ListAndTuple extends LearningModule {
     myList1 = myList1 :+ 4 // Append Slow!
 
     // Number of elements
-    val len = myList1.length
+    val len: Int = myList1.length
 
     // Building List => Second way: using ListBuffer
     val myListBuilder = new ListBuffer[Int]()
@@ -43,7 +43,7 @@ object ListAndTuple extends LearningModule {
     myListBuilder.append(2)
     myListBuilder.append(3)
     myListBuilder.append(4)
-    val myList2 = myListBuilder.toList
+    val myList2: List[Int] = myListBuilder.toList
     
     // Iterating lists
     /* 

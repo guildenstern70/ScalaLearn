@@ -29,8 +29,8 @@ object FirstClassFunctions extends LearningModule {
     // It can be passed to a function as a parameter
     // circleArea and squareArea are functions that takes one parameter of type Double
     // and returns a Double
-    val circleArea = (radius: Double) => { radius * radius * Math.PI }
-    val squareArea = (side: Double) => { side * side } 
+    val circleArea: (Double) => Double = (radius: Double) => { radius * radius * Math.PI }
+    val squareArea: (Double) => Double = (side: Double) => { side * side }
 
     // funcRun is a Higher Order Function:
     // since it accepts a function as parameter

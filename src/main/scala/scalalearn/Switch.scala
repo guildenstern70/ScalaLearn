@@ -19,10 +19,11 @@
  */
 package scalalearn
 
-object Switch {
+object Switch
+{
 
-    def test() {
-
+    def test()
+    {
         val test: Printer = new Printer("Match Test")
         test += this.tryMatch(17)
         test += this.tryMatch("hello")
@@ -30,7 +31,8 @@ object Switch {
         test.print()
     }
 
-    def tryMatch(any: Any): String = any match {
+    def tryMatch(any: Any): String = any match
+    {
 
         case 17 => "Seventeen"
         case true => "truth"

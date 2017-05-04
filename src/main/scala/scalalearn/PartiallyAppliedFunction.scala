@@ -21,15 +21,15 @@ package scalalearn
 
 object PartiallyAppliedFunction extends LearningModule {
     
-    var resultsList = List[Int]()
+    var resultsList: List[Int] = List[Int]()
     
     def myFunction(a: Int, b: Int, c:Int): Int = (a*b)+c
     
     // Placeholder
     
     // 'functor' is a partially applied function
-    val functor = myFunction _
-    val result = functor(4,5,6)
+    val functor: (Int, Int, Int) => Int = myFunction _
+    val result: Int = functor(4,5,6)
     
     resultsList = result :: resultsList 
     

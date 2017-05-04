@@ -30,15 +30,8 @@ object Currying extends LearningModule {
     def formatTestMessages(messages: List[String])
                           (joiner: () => String) : String = {
 
-        val strBuilder = new StringBuilder()
-        
-        for (message <- messages) {
-        	strBuilder.append(message)
-        	strBuilder.append(joiner())
-        }
-        	
-        strBuilder.toString
-        
+        messages.mkString(joiner())
+
     }
 
     def example() {

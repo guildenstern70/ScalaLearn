@@ -25,7 +25,7 @@ object Arrays extends LearningModule {
     var myArray1 = Array(1,2,3,4)
     
     // Read item
-    val item2 = myArray1(2)
+    val item2: Int = myArray1(2)
     
     // Write item
     myArray1(2) = 18

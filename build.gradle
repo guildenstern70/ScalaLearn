@@ -22,6 +22,11 @@ scalaStyle {
 	testSource = "src/test/scala"
 }
 
+compileScala {
+    scalaCompileOptions.additionalParameters = ['-target:jvm-1.8', '-feature',
+                                                '-language:implicitConversions']
+}
+
 test {
 	reports.junitXml.destination = file('shippable/testresults')
 }

@@ -29,8 +29,8 @@ class ClassTemplate(pName: String, pSurname: String)
     extends LearningModule {
 
     // Constructor
-    protected val objName = pName
-    protected val objSurname = pSurname
+    protected val objName: String = pName
+    protected val objSurname: String = pSurname
 
     // Preconditions
     require(pName != null)
@@ -65,19 +65,12 @@ class ClassTemplate(pName: String, pSurname: String)
     }
 
     // Override 'Any' method: toString
-    override def toString: String = {
-        val sb = new StringBuilder()
-        sb.append('[')
-        sb.append(this.name)
-        sb.append(' ')
-        sb.append(this.surname)
-        sb.append(']')
-        sb.toString
-    }
+    override def toString: String = s"[$name $surname]"
+
 
     // Override 'Any' method: equals (Any method '==' is final
     // and cannot be overridden
-    override def equals(that: Any) = that match {
+    override def equals(that: Any): Boolean = that match {
 	    case that: ClassTemplate => this.isEqualTo(that)
 	    case _ => false
 	  }

@@ -32,7 +32,7 @@ object Collections extends LearningModule
         println("1 key does not exist")
     }
 
-    val third = dictionary.keys.drop(2).head
+    val third: Int = dictionary.keys.drop(2).head
 
     /* Mutable: you can add elements */
     val mutableDictionary = collection.mutable.Map.empty[Int, String]

@@ -34,8 +34,8 @@ abstract class TryCatch extends LearningModule
         }
         catch
         {
-            case foo: IndexOutOfBoundsException => print("Index Out Of Bounds")
-            case bar: NotImplementedError => print("Not implemented")
+            case _: IndexOutOfBoundsException => print("Index Out Of Bounds")
+            case bar: NotImplementedError => print("Not implemented: " + bar.getLocalizedMessage)
             case _: Throwable => println("Got some other kind of exception")
         }
         finally
