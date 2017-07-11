@@ -54,6 +54,7 @@ object Main {
         useCases.append(Options)
         useCases.append(Collections)
         useCases.append(Implicits)
+        useCases.append(MapReduce)
 
         useCases.foreach(_.printOutput)
         
