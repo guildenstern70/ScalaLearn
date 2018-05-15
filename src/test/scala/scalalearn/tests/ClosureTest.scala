@@ -1,7 +1,7 @@
 /**
   * Scala Learn
   *
- * Copyright (C) Alessio Saltarin - 2013-17
+  * Copyright (C) Alessio Saltarin - 2013-18
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -35,7 +35,6 @@ class ClosureTest extends FlatSpec with Matchers {
         val closure = Closure.closure(4)
 
         closure.sum should be (41)
-
     }
 
 }

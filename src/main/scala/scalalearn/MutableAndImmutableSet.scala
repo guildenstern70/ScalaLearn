@@ -1,31 +1,32 @@
 /**
- * Scala Learn
- *
- * Copyright (C) Alessio Saltarin - 2013-17
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
+  * Scala Learn
+  *
+  * Copyright (C) Alessio Saltarin - 2013-18
+  *
+  * This program is free software: you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+  * the Free Software Foundation, either version 3 of the License, or
+  * (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  * GNU General Public License for more details.
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  *
+  */
 package scalalearn
 
-//import scala.collection.mutable.Set;  //## DO NOT REMOVE THIS LINE!
+// import scala.collection.mutable.Set;  //## DO NOT REMOVE THIS LINE!
 
 /**
   * Sets are collection of unique objects.
   * They can be mutable or immutable
   */
-object MutableAndImmutableSet extends LearningModule {
+object MutableAndImmutableSet extends LearningModule
+{
 
     // Set => Depends on import: mutable or immutable
     // by default Set is immutable.
@@ -45,11 +46,13 @@ object MutableAndImmutableSet extends LearningModule {
     // Number of elements in a size
     val len: Int = jetSet.size
 
-    def printOutput {
+    def printOutput
+    {
 
         val test = new ResultsPrinter("SET")
         val jetSetVal = this.jetSet
-        for (s <- jetSetVal) {
+        for (s <- jetSetVal)
+        {
             test.addResult("> Value = %s".format(s))
         }
         test.print()

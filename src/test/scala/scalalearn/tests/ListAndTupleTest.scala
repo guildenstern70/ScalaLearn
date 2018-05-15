@@ -1,7 +1,7 @@
 /**
   * Scala Learn
   *
- * Copyright (C) Alessio Saltarin - 2013-17
+ * Copyright (C) Alessio Saltarin - 2013-18
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -23,9 +23,7 @@ package scalalearn.tests
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.{FlatSpec, Matchers}
-
 import scalalearn.ListAndTuple
-
 
 @RunWith(classOf[JUnitRunner])
 class ListAndTupleTest extends FlatSpec with Matchers {
@@ -50,6 +48,5 @@ class ListAndTupleTest extends FlatSpec with Matchers {
         ListAndTuple.myTuple._3 should be (345.7)
 
     }
-    
 
 }

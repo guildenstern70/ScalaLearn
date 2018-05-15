@@ -1,32 +1,35 @@
 /**
- * Scala Learn
- *
- * Copyright (C) Alessio Saltarin - 2013-17
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
+  * Scala Learn
+  *
+  * Copyright (C) Alessio Saltarin - 2013-18
+  *
+  * This program is free software: you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+  * the Free Software Foundation, either version 3 of the License, or
+  * (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  * GNU General Public License for more details.
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  *
+  */
 
 package scalalearn.traits
 
 import scalalearn.{ClassTemplate, LearningModule, ResultsPrinter}
 
-object TraitsTest extends LearningModule {
+object TraitsTest extends LearningModule
+{
 
-    class ClassWithTraits extends Speaking with Dancing {
+    class ClassWithTraits extends Speaking with Dancing
+    {
 
-        def test() {
+        def test()
+        {
             this.speak;
             this.dance;
         }
@@ -38,18 +41,20 @@ object TraitsTest extends LearningModule {
     // by adding 'XXX' and 'YYY' to the name,
     // Here you can see how we can 'Stack' the traits together
     class ClassTemplateWithXXX(smName: String, smSurname: String)
-        extends ClassTemplate(smName, smSurname) with AddXXXStackableTrait
-    
+            extends ClassTemplate(smName, smSurname) with AddXXXStackableTrait
+
     // Try to invert the traits here!
-    // (order is important!!)    
+    // (order is important!!)
     class ClassTemplateWithXXXandYYY(smName: String, smSurname: String)
-        extends ClassTemplate(smName, smSurname) with AddYYYStackableTrait with AddXXXStackableTrait
+            extends ClassTemplate(smName, smSurname)
+                    with AddYYYStackableTrait with AddXXXStackableTrait
 
     val objectWithTraits = new TraitsTest.ClassWithTraits
     val firstObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXX("Pippo", "Rossi")
     val secondObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXXandYYY("Pippo", "Rossi")
 
-    def printOutput() {
+    def printOutput()
+    {
 
         val test = new ResultsPrinter("Traits")
 

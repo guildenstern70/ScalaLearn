@@ -1,7 +1,7 @@
 /**
   * Scala Learn
   *
-  * Copyright (C) Alessio Saltarin - 2013-17
+  * Copyright (C) Alessio Saltarin - 2013-18
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -32,13 +32,14 @@ object Implicits extends LearningModule
     implicit def NumberStringToNumber(d: NumberString): Int =
         d.number.toInt
 
-    override def printOutput: Unit = {
+    override def printOutput: Unit =
+    {
 
         val test = new ResultsPrinter("IMPLICIT CONVERSIONS")
         val impl = NumberString("23")
 
         // This should be 46
-        val result = 2*impl
+        val result = 2 * impl
         test.addResult(result.toString + " should be 46")
         test.print()
     }

@@ -1,7 +1,7 @@
 /**
   * Scala Learn
   *
- * Copyright (C) Alessio Saltarin - 2013-17
+  * Copyright (C) Alessio Saltarin - 2013-18
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -21,22 +21,19 @@ package scalalearn
 
 import java.util
 
-/**
-  * Use this import!
-  */
-import scala.collection.JavaConversions._
+import scala.collection.JavaConverters._
 
 /**
-  *
+  * Java List converted to Scala list
+  * (in this case it's necessary because
+  * withFilter is not a member of java.util.ArrayList[String])
   */
-abstract class JavaConversions extends LearningModule
+abstract class JavaConversion extends LearningModule
 {
-    // Please note the import
-    // Do not use JavaConverters (obsolete)
 
     val javaList = new util.ArrayList[String]()
 
-    for (item: String <- javaList)
+    for (item: String <- javaList.asScala)
     {
         print(item)
     }

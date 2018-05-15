@@ -1,7 +1,7 @@
 /**
   * Scala Learn
   *
- * Copyright (C) Alessio Saltarin - 2013-17
+  * Copyright (C) Alessio Saltarin - 2013-18
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -23,18 +23,22 @@ package scalalearn
 /**
   * Option is the preferred way to handle nullable types
   */
-object Options extends LearningModule {
+object Options extends LearningModule
+{
 
 
     def removeExcept(someString: String): Option[String] =
     {
         if (someString.startsWith("!"))
+        {
             return None
+        }
 
         Some(someString.substring(1))
     }
 
-    def printOutput {
+    def printOutput
+    {
 
         val test = new ResultsPrinter("OPTIONS")
 
@@ -42,16 +46,20 @@ object Options extends LearningModule {
         val second = "!This is KO"
 
         val removeOne: Option[String] = removeExcept(first)
-        val removeTwo: Option[String]  = removeExcept(second)
+        val removeTwo: Option[String] = removeExcept(second)
 
         var removeOneResult: String = "This is not defined (None)"
         var removeTwoResult: String = "This is not defined (None)"
 
         if (removeOne.isDefined)
+        {
             removeOneResult = removeOne.get
+        }
 
         if (removeTwo.isDefined)
+        {
             removeTwoResult = removeTwo.get
+        }
 
         test.addResult(removeOneResult)
         test.addResult(removeTwoResult)

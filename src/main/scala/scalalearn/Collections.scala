@@ -7,7 +7,8 @@ object Collections extends LearningModule
 {
     /*
 
-    Collections in Scala can be Mutable (fast add and remove) or Immutable (very slow add and remove)
+    Collections in Scala can be Mutable (fast add and remove) or
+    Immutable (very slow add and remove)
     --> See MutableAndImmutableSet
 
     Normal object collections -> See List in ListAndTuple
@@ -16,7 +17,7 @@ object Collections extends LearningModule
      */
 
     /* Immutable: cannot add elements */
-    val dictionary : Map[Int, String] = Map(
+    val dictionary: Map[Int, String] = Map(
 
         1 -> "AAA",
         2 -> "BBB",
@@ -26,11 +27,16 @@ object Collections extends LearningModule
     val keys: Iterable[Int] = dictionary.keys
     val values: Iterable[String] = dictionary.values
 
-    if( dictionary.contains( 1 )) {
-        println("Key exists with value :"  + dictionary(1))
-    } else {
+    // scalastyle:off println
+    if (dictionary.contains(1))
+    {
+        println("Key exists with value :" + dictionary(1))
+    }
+    else
+    {
         println("1 key does not exist")
     }
+    // scalastyle:on println
 
     val third: Int = dictionary.keys.drop(2).head
 
@@ -44,13 +50,15 @@ object Collections extends LearningModule
     mutableSet += "AAA"
     mutableSet += "BBB"
 
-    def printOutput {
+    def printOutput
+    {
 
         val test = new ResultsPrinter("COLLECTIONS (MAPS)")
 
-        dictionary.keys.foreach{ i =>
-            test.addResult("Key = " + i )
-            test.addResult("Value = " + dictionary(i) )
+        dictionary.keys.foreach
+        { i =>
+            test.addResult("Key = " + i)
+            test.addResult("Value = " + dictionary(i))
         }
 
         test.print()

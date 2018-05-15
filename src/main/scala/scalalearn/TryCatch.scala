@@ -1,7 +1,7 @@
 /**
   * Scala Learn
   *
- * Copyright (C) Alessio Saltarin - 2013-17
+  * Copyright (C) Alessio Saltarin - 2013-18
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ abstract class TryCatch extends LearningModule
         {
             case _: IndexOutOfBoundsException => print("Index Out Of Bounds")
             case bar: NotImplementedError => print("Not implemented: " + bar.getLocalizedMessage)
-            case _: Throwable => println("Got some other kind of exception")
+            case _: Throwable => print("Got some other kind of exception")
         }
         finally
         {

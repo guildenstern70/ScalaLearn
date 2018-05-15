@@ -22,6 +22,7 @@ gradle/
 
 # IntelliJ
 .idea/
+ScalaLearn.iml
 
 # Gradle
 build/

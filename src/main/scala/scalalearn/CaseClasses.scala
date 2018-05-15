@@ -1,7 +1,7 @@
 /**
   * Scala Learn
   *
- * Copyright (C) Alessio Saltarin - 2013-17
+  * Copyright (C) Alessio Saltarin - 2013-18
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -19,14 +19,16 @@
   */
 package scalalearn
 
-object CaseClasses extends LearningModule {
+object CaseClasses extends LearningModule
+{
 
     val maria = Persona(surname = "Callas", name = "Maria")
     val elena: Persona = maria.copy("Elena")
 
-    def printOutput {
+    def printOutput
+    {
 
-      val results = new ResultsPrinter("CASE CLASSES")
+        val results = new ResultsPrinter("CASE CLASSES")
         results += "Class name = " + CaseClasses.maria.toString
         results += "Class name = " + CaseClasses.elena.toString
         results += "Hash Code = " + CaseClasses.maria.hashCode
@@ -40,7 +42,8 @@ object CaseClasses extends LearningModule {
     def whoWas(p: Persona): String = p.name + " " + p.surname + this.matchingPersona(p)
 
     // Case classes simple match
-    def matchingPersona(p: Persona): String = p match {
+    def matchingPersona(p: Persona): String = p match
+    {
         case Persona("Maria", "Callas") => " was a great singer."
         case _ => " was unknown to most."
     }
@@ -54,6 +57,5 @@ object CaseClasses extends LearningModule {
     // 5. The class supports pattern matching
     // 6. Parameter can be specified by name
     case class Persona(name: String, surname: String)
-
 
 }

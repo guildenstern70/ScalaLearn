@@ -1,11 +1,15 @@
-version "0.4"
+group 'scalalearn'
+version '0.4'
 
 buildscript {
 	repositories {
 		jcenter()
+        maven {
+            url 'https://dl.bintray.com/ngbinh/maven/'
+        }
 	}
 	dependencies {
-		classpath group: 'org.github.ngbinh.scalastyle', name: 'gradle-scalastyle-plugin_2.10', version: '0.8.2'
+		classpath 'org.github.ngbinh.scalastyle:gradle-scalastyle-plugin_2.12:1.0.1'
 	}
 }
 
@@ -13,13 +17,13 @@ apply plugin: 'scala'
 apply plugin: 'application'
 apply plugin: 'scalaStyle'
 
-mainClassName = "scalalearn.Main"
+mainClassName = 'scalalearn.Main'
 
 scalaStyle {
-	configLocation = "src/main/resources/scalastyle_config.xml"
+	configLocation = 'src/main/resources/scalastyle_config.xml'
 	includeTestSourceDirectory = true
-	source = "src/main/scala"
-	testSource = "src/test/scala"
+	source = 'src/main/scala'
+	testSource = 'src/test/scala'
 }
 
 compileScala {
@@ -32,13 +36,13 @@ test {
 }
 
 repositories {
-	mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    compile 'org.scala-lang:scala-library:2.11.8'
-    testCompile 'org.scalatest:scalatest_2.11:3.0.0'
-	testCompile 'junit:junit:4.+'
+    compile group:'org.scala-lang', name:'scala-library', version: '2.12.6'
+    testCompile group:'org.scalatest', name:'scalatest_2.12', version: '3.0.5'
+	testCompile group:'junit', name: 'junit', version: '4.+'
 }
 
 
