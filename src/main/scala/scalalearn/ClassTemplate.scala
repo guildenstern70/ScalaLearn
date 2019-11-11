@@ -49,7 +49,7 @@ class ClassTemplate(pName: String, pSurname: String)
     }
 
     // scalastyle:off println
-    def printOutput
+    def printOutput: Unit =
     {
 
         println("\n** TEST ClassTemplate **")

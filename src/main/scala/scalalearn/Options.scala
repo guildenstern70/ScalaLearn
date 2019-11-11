@@ -37,7 +37,7 @@ object Options extends LearningModule
         Some(someString.substring(1))
     }
 
-    def printOutput
+    def printOutput: Unit =
     {
 
         val test = new ResultsPrinter("OPTIONS")

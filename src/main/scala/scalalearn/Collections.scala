@@ -50,7 +50,7 @@ object Collections extends LearningModule
     mutableSet += "AAA"
     mutableSet += "BBB"
 
-    def printOutput
+    def printOutput: Unit =
     {
 
         val test = new ResultsPrinter("COLLECTIONS (MAPS)")

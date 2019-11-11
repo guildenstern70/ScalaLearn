@@ -40,7 +40,7 @@ object MapForEachAndSoOn extends LearningModule
         sum
     }
 
-    def printOutput
+    def printOutput: Unit =
     {
         new ResultsPrinter("List Map").printDetails(numbersMap().iterator)
         new ResultsPrinter("List Sum").printDetail(numbersSum())

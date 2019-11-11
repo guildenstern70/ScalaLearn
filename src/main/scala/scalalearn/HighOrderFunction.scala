@@ -42,7 +42,7 @@ object HighOrderFunction extends LearningModule
         areaCompute(lato)
     }
 
-    def printOutput
+    def printOutput: Unit =
     {
         val latoPentagono: Double = 5.0f
         val latoEsagono: Double = 6.0f

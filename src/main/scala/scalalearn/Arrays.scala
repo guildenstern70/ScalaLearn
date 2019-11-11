@@ -36,7 +36,7 @@ object Arrays extends LearningModule
     myArray2(0) = "Alessio"
     myArray2(1) = "Saltarin"
 
-    def printOutput
+    def printOutput: Unit =
     {
         new ResultsPrinter("ARRAY 1/2").printDetails(myArray1.iterator)
         new ResultsPrinter("ARRAY 2/2").printDetails(myArray2.iterator)

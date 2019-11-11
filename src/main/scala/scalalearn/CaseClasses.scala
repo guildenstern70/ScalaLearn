@@ -25,7 +25,7 @@ object CaseClasses extends LearningModule
     val maria = Persona(surname = "Callas", name = "Maria")
     val elena: Persona = maria.copy("Elena")
 
-    def printOutput
+    def printOutput: Unit =
     {
 
         val results = new ResultsPrinter("CASE CLASSES")

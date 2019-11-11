@@ -31,7 +31,7 @@ object PartiallyAppliedFunction extends LearningModule
 
     resultsList = result :: resultsList
 
-    def printOutput
+    def printOutput: Unit =
     {
         new ResultsPrinter("Partially Applied Function").printDetails(resultsList.iterator)
     }

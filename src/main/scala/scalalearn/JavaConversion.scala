@@ -19,21 +19,20 @@
   */
 package scalalearn
 
-import java.util
-
-import scala.collection.JavaConverters._
+import scala.jdk.CollectionConverters._
 
 /**
   * Java List converted to Scala list
   * (in this case it's necessary because
-  * withFilter is not a member of java.util.ArrayList[String])
+ * withFilter (<-) is not a member of java.util.ArrayList[String])
   */
 abstract class JavaConversion extends LearningModule
 {
 
-    val javaList = new util.ArrayList[String]()
+    val javaList = new java.util.ArrayList[String](10)
+    val scalaList = javaList.asScala
 
-    for (item: String <- javaList.asScala)
+    for (item: String <- scalaList)
     {
         print(item)
     }

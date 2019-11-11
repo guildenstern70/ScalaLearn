@@ -46,7 +46,7 @@ object MutableAndImmutableSet extends LearningModule
     // Number of elements in a size
     val len: Int = jetSet.size
 
-    def printOutput
+    def printOutput: Unit =
     {
 
         val test = new ResultsPrinter("SET")

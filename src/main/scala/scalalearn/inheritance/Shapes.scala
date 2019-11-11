@@ -25,7 +25,7 @@ import scalalearn.LearningModule
 object Shapes extends LearningModule
 {
     // scalastyle:off println
-    def printOutput
+    def printOutput: Unit =
     {
         println("** TEST Inheritance **")
 

@@ -28,7 +28,7 @@ object TraitsTest extends LearningModule
     class ClassWithTraits extends Speaking with Dancing
     {
 
-        def test()
+        def test(): Unit =
         {
             this.speak;
             this.dance;
@@ -53,7 +53,7 @@ object TraitsTest extends LearningModule
     val firstObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXX("Pippo", "Rossi")
     val secondObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXXandYYY("Pippo", "Rossi")
 
-    def printOutput()
+    def printOutput(): Unit =
     {
 
         val test = new ResultsPrinter("Traits")

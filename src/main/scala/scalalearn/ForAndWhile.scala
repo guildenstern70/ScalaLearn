@@ -51,8 +51,11 @@ object ForAndWhile extends LearningModule
     this.printOutput("FOR #3")
 
     // Yielding
-    val ints = for (a <- someNumbers) yield a * 2
-    this.results = ints.to[ListBuffer]; // !! Brilliant conversion!
+    val ints: Array[Int] = for (a <- someNumbers) yield a * 2
+    ints.foreach
+    {
+        this.results += _
+    }
     this.printOutput("YIELD")
 
     // For comprehension
@@ -61,7 +64,10 @@ object ForAndWhile extends LearningModule
         (x, i) <- ints.zipWithIndex
         if i % 2 != 0
     } yield x
-    this.results = ints.to[ListBuffer]
+    ints.foreach
+    {
+        this.results += _
+    }
     this.printOutput("FOR COMPREHENSION")
 
     // Filtering
@@ -85,13 +91,13 @@ object ForAndWhile extends LearningModule
     }
     this.printOutput("WHILE")
 
-    def printOutput
+    def printOutput: Unit =
     {
         new ResultsPrinter(this.testName + " -> ").printDetails(this.results.toList.iterator);
         this.results = new ListBuffer[Int]()
     }
 
-    def printOutput(testName: String)
+    def printOutput(testName: String): Unit =
     {
         this.testName = testName;
         this.printOutput

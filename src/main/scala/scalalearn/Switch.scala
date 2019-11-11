@@ -22,7 +22,7 @@ package scalalearn
 object Switch
 {
 
-    def test()
+    def test(): Unit =
     {
         val test: Printer = new Printer("Match Test")
         test += this.tryMatch(17)

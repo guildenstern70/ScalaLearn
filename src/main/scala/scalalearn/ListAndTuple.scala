@@ -62,7 +62,7 @@ object ListAndTuple extends LearningModule
     // List[Any] => myTuple.productIterator.toList
 
 
-    def printOutput
+    def printOutput: Unit =
     {
         new ResultsPrinter("LIST 1/2").printDetails(myList1.iterator)
         new ResultsPrinter("LIST 2/2").printDetails(myList2.iterator)

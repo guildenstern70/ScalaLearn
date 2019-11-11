@@ -37,7 +37,7 @@ object Closure extends LearningModule
         someNumbers.filter(_ > f)
     }
 
-    def printOutput
+    def printOutput: Unit =
     {
 
         val test = new ResultsPrinter("CLOSURE")

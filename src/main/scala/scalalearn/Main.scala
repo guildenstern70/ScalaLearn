@@ -18,10 +18,10 @@
   */
 package scalalearn
 
-import scala.collection.mutable.ListBuffer
-
 import scalalearn.inheritance.Shapes
 import scalalearn.traits.TraitsTest
+
+import scala.collection.mutable.ListBuffer
 
 
 /**
@@ -33,7 +33,7 @@ object Main
 
     final val VERSION = "v.0.3.1025"
 
-    def main(args: Array[String])
+    def main(args: Array[String]): Unit =
     {
 
         // scalastyle:off println

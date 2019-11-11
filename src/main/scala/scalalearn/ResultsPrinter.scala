@@ -26,23 +26,23 @@ class ResultsPrinter(testName: String)
 
     val results = new ListBuffer[String]
 
-    def +=(result: String)
+    def +=(result: String): Unit =
     {
         ResultsPrinter.this.addResult(result)
     }
 
-    def addResult(result: String)
+    def addResult(result: String): Unit =
     {
         results.append(result)
     }
 
-    def printDetail(result: Any)
+    def printDetail(result: Any): Unit =
     {
         ResultsPrinter.this.addResult(result.toString)
         ResultsPrinter.this.print()
     }
 
-    def printDetails(results: Iterator[Any])
+    def printDetails(results: Iterator[Any]): Unit =
     {
         results.foreach
         { i => ResultsPrinter.this.addResult("> Value = %s".format(i.toString)) }
@@ -50,7 +50,7 @@ class ResultsPrinter(testName: String)
     }
 
     // scalastyle:off println
-    def print()
+    def print(): Unit =
     {
         val testOutput: List[String] = ResultsPrinter.this.results.toList
         def resultsString = testOutput.mkString(sys.props("line.separator"))

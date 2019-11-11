@@ -41,7 +41,7 @@ object MapReduce extends LearningModule
         val groups: Map[Char, List[Person]] = people.groupBy(_.sex)
 
         val sexWithAges: Map[Char, List[Int]] =
-            groups.mapValues(_.map(_.age))
+            groups.view.mapValues(_.map(_.age)).toMap[Char, List[Int]]
 
         val sexWithTotalSumOfAges: Map[Char, Int] =
             sexWithAges.map
@@ -106,14 +106,15 @@ object MapReduce extends LearningModule
     {
 
         val groups: Map[Char, List[Person]] = people.groupBy(_.sex)
-        val namesWithSex: Map[Char, String] = groups.mapValues(_.map(_.name).mkString(" & "))
+        val namesWithSex: Map[Char, String] =
+            groups.view.mapValues(_.map(_.name).mkString(" & ")).toMap[Char, String]
         namesWithSex.map
         {
             case (k, v) => k + ": " + v
         }.toList
     }
 
-    def printOutput
+    def printOutput: Unit =
     {
         new ResultsPrinter("Average ages").printDetails(averageAges.iterator)
         new ResultsPrinter("Get males").printDetails(getMales.iterator)

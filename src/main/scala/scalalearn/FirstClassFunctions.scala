@@ -49,7 +49,7 @@ object FirstClassFunctions extends LearningModule
     }
 
 
-    def printOutput
+    def printOutput: Unit =
     {
 
         val test = new ResultsPrinter("FIRST CLASS FUNCTION")

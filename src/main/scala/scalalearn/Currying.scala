@@ -35,7 +35,7 @@ object Currying extends LearningModule
     }
 
     // scalastyle:off println
-    def example()
+    def example(): Unit =
     {
         val messages = List("One", "Two", "Three")
         val dashSeparator = () =>
@@ -50,7 +50,7 @@ object Currying extends LearningModule
         println(formatTestMessages(messages)(blablaSeparator))
     }
 
-    def printOutput
+    def printOutput: Unit =
     {
         println
         println("** TEST CURRYING **")
