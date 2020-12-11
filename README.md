@@ -1,6 +1,6 @@
 # ScalaLearn
 
-[![Run Status](https://api.shippable.com/projects/590adb9086175d070061b8a1/badge?branch=master)](https://app.shippable.com/github/guildenstern70/ScalaLearn)
+[![Build Status](https://travis-ci.com/guildenstern70/ScalaLearn.svg?branch=master)](https://travis-ci.com/guildenstern70/ScalaLearn)
 
 A collection of simple source code examples in Scala, featuring key aspects of the language.
 
