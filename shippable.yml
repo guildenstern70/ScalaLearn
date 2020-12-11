@@ -6,4 +6,5 @@ jdk:
  - oraclejdk8
 build:
   ci:
+    - sdk use gradle 6.6.1
     - gradle check
