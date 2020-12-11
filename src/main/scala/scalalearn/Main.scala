@@ -1,13 +1,13 @@
 /**
   * Scala Learn
-  * Copyright (C) Alessio Saltarin - 2013-18
-  *
-  * This program is free software: you can redistribute it and/or modify
-  * it under the terms of the GNU General Public License as published by
-  * the Free Software Foundation, either version 3 of the License, or
-  * (at your option) any later version.
-  *
-  * This program is distributed in the hope that it will be useful,
+ * Copyright (C) Alessio Saltarin - 2013-20
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
   * but WITHOUT ANY WARRANTY; without even the implied warranty of
   * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   * GNU General Public License for more details.
@@ -62,7 +62,7 @@ object Main
         useCases.append(Implicits)
         useCases.append(MapReduce)
 
-        useCases.foreach(_.printOutput)
+        useCases.foreach(_.printOutput())
 
         println()
         println("All done. Bye.")

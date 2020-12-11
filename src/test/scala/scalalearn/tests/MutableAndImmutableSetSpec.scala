@@ -17,23 +17,32 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
   *
   */
-package scalalearn
 
-object PartiallyAppliedFunction extends LearningModule
+package scalalearn.tests
+
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should
+import scalalearn.MutableAndImmutableSet
+
+class MutableAndImmutableSetSpec extends AnyFlatSpec with should.Matchers
 {
-    var resultsList: List[Int] = List[Int]()
 
-    def myFunction(a: Int, b: Int, c: Int): Int = (a * b) + c
+    "The given set" should "cointain the expected number of elements" in
+            {
 
-    // 'functor' is a partially applied function
-    val functor: (Int, Int, Int) => Int = myFunction _
-    val result: Int = functor(4, 5, 6)
+                MutableAndImmutableSet.jetSet.size should be(3)
 
-    resultsList = result :: resultsList
+            }
 
-    def printOutput(): Unit =
-    {
-        new ResultsPrinter("Partially Applied Function").printDetails(resultsList.iterator)
+    it should "only contain unique items" in
+            {
+
+                // We try to add an element that is already present
+        MutableAndImmutableSet.jetSet += "Lear"
+        MutableAndImmutableSet.jetSet.size should be (3)
+
     }
+
+
 
 }

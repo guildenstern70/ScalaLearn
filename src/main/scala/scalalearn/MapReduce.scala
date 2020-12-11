@@ -1,17 +1,17 @@
 /**
-  * Scala Learn
-  *
-  * Copyright (C) Alessio Saltarin - 2013-18
-  *
-  * This program is free software: you can redistribute it and/or modify
-  * it under the terms of the GNU General Public License as published by
-  * the Free Software Foundation, either version 3 of the License, or
-  * (at your option) any later version.
-  *
-  * This program is distributed in the hope that it will be useful,
-  * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  * GNU General Public License for more details.
+ * Scala Learn
+ *
+ * Copyright (C) Alessio Saltarin - 2013-20
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
   *
   * You should have received a copy of the GNU General Public License
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
@@ -61,7 +61,7 @@ object MapReduce extends LearningModule
                     (sex, totalAge.toDouble / sexCount(sex))
             }
 
-        sexWithAverageAge.map(map => map._1 + " > " + map._2.toString).toList
+        sexWithAverageAge.map(map => s"${map._1} > ${map._2}").toList
 
     }
 
@@ -110,11 +110,11 @@ object MapReduce extends LearningModule
             groups.view.mapValues(_.map(_.name).mkString(" & ")).toMap[Char, String]
         namesWithSex.map
         {
-            case (k, v) => k + ": " + v
+            case (k, v) => s"$k: $v"
         }.toList
     }
 
-    def printOutput: Unit =
+    def printOutput(): Unit =
     {
         new ResultsPrinter("Average ages").printDetails(averageAges.iterator)
         new ResultsPrinter("Get males").printDetails(getMales.iterator)

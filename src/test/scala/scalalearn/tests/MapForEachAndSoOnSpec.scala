@@ -17,23 +17,28 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
   *
   */
-package scalalearn
 
-object PartiallyAppliedFunction extends LearningModule
+package scalalearn.tests
+
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should
+import scalalearn.MapForEachAndSoOn
+
+/**
+ * Created by Alessio on 14/09/2016.
+ */
+class MapForEachAndSoOnSpec extends AnyFlatSpec with should.Matchers
 {
-    var resultsList: List[Int] = List[Int]()
 
-    def myFunction(a: Int, b: Int, c: Int): Int = (a * b) + c
 
-    // 'functor' is a partially applied function
-    val functor: (Int, Int, Int) => Int = myFunction _
-    val result: Int = functor(4, 5, 6)
+    "Maps and so on" should "contain expected values" in
+            {
 
-    resultsList = result :: resultsList
+                MapForEachAndSoOn.numbersMap().sum should be(42)
+                MapForEachAndSoOn.eachNumber() should be(21)
+                MapForEachAndSoOn.numbersSum() should be(21)
 
-    def printOutput(): Unit =
-    {
-        new ResultsPrinter("Partially Applied Function").printDetails(resultsList.iterator)
-    }
+            }
 
 }
+

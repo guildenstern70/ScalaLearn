@@ -17,23 +17,37 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
   *
   */
-package scalalearn
 
-object PartiallyAppliedFunction extends LearningModule
+package scalalearn.tests
+
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should
+import scalalearn.ListAndTuple
+
+class ListAndTupleSpec extends AnyFlatSpec with should.Matchers
 {
-    var resultsList: List[Int] = List[Int]()
 
-    def myFunction(a: Int, b: Int, c: Int): Int = (a * b) + c
 
-    // 'functor' is a partially applied function
-    val functor: (Int, Int, Int) => Int = myFunction _
-    val result: Int = functor(4, 5, 6)
+    "The #1 list" should "contain expected values" in
+            {
 
-    resultsList = result :: resultsList
+                ListAndTuple.myList1 should be(List(0, 1, 2, 3, 4))
 
-    def printOutput(): Unit =
-    {
-        new ResultsPrinter("Partially Applied Function").printDetails(resultsList.iterator)
+            }
+
+    "The #2 list" should "contain expected values" in
+            {
+
+        ListAndTuple.myList2 should be (List(1, 2, 3, 4))
+
+    }
+
+    "The tuple" should "contain expected values" in {
+
+        ListAndTuple.myTuple._1 should be (77)
+        ListAndTuple.myTuple._2 should be ("Alessio")
+        ListAndTuple.myTuple._3 should be (345.7)
+
     }
 
 }

@@ -17,23 +17,24 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
   *
   */
-package scalalearn
+package scalalearn.tests
 
-object PartiallyAppliedFunction extends LearningModule
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should
+import scalalearn.Closure
+
+
+class ClosureSpec extends AnyFlatSpec with should.Matchers
 {
-    var resultsList: List[Int] = List[Int]()
 
-    def myFunction(a: Int, b: Int, c: Int): Int = (a * b) + c
+    "Closure" should "contain expected values" in
+            {
 
-    // 'functor' is a partially applied function
-    val functor: (Int, Int, Int) => Int = myFunction _
-    val result: Int = functor(4, 5, 6)
+                // The list 'someNumbers' exists even if
+                // we did not instantiate the Closure object
+                val closure = Closure.closure(4)
 
-    resultsList = result :: resultsList
-
-    def printOutput(): Unit =
-    {
-        new ResultsPrinter("Partially Applied Function").printDetails(resultsList.iterator)
-    }
+                closure.sum should be(41)
+            }
 
 }
