@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-20
+ * Copyright (C) Alessio Saltarin - 2013-21
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ package scalalearn
 object Arrays extends LearningModule
 {
     // Arrays map one-to-one with Java arrays (ie.: int[])
-    var myArray1 = Array(1, 2, 3, 4)
+    var myArray1: Array[Int] = Array(1, 2, 3, 4)
 
     // Read item
     val item2: Int = myArray1(2)

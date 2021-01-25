@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-20
+ * Copyright (C) Alessio Saltarin - 2013-21
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,6 +34,7 @@ object FirstClassFunctions extends LearningModule
     {
         radius * radius * Math.PI
     }
+
     val squareArea: (Double) => Double = (side: Double) =>
     {
         side * side
@@ -41,12 +42,7 @@ object FirstClassFunctions extends LearningModule
 
     // funcRun is a Higher Order Function:
     // since it accepts a function as parameter
-    def funcRun(func: Double => Double, v: Double): String =
-    {
-        val result = func(v)
-        result.toString
-
-    }
+    def funcRun(func: Double => Double, v: Double): String = func(v).toString
 
 
     def printOutput(): Unit =

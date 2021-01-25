@@ -1,7 +1,7 @@
 /**
  * Scala Learn
  *
- * Copyright (C) Alessio Saltarin - 2013-20
+ * Copyright (C) Alessio Saltarin - 2013-21
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,10 +28,10 @@ object MapReduce extends LearningModule
 
     case class Person(name: String, age: Int, sex: Char)
 
-    val person1 = Person("Alessio", 47, 'M')
-    val person2 = Person("Giulia", 32, 'F')
-    val person3 = Person("Elena", 17, 'F')
-    val person4 = Person("Marco", 39, 'M')
+    val person1: Person = Person("Alessio", 47, 'M')
+    val person2: Person = Person("Giulia", 32, 'F')
+    val person3: Person = Person("Elena", 17, 'F')
+    val person4: Person = Person("Marco", 39, 'M')
 
     val people = List(person1, person2, person3, person4)
 
