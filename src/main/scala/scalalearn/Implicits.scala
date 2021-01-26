@@ -40,7 +40,7 @@ object Implicits extends LearningModule
 
         // This should be 46
         val result = 2 * impl
-        test.addResult(result.toString + " should be 46")
+        test.addResult(s"${result.toString} should be 46")
         test.print()
     }
 }

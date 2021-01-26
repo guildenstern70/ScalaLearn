@@ -21,35 +21,34 @@ package scalalearn
 
 object HighOrderFunction extends LearningModule
 {
-
-    // Area pentagono: l*5* (l*0,688) / 2 = l^2 * 1,72
-    // Area esagono: l * (l * 0,866) * 3 = l^2 * 2,598
-
-    val pentagonoComputer: Double => Double = (lato: Double) =>
+    // Pentagon area formula: l*5* (l*0,688) / 2 = l^2 * 1,72
+    val pentagonComputer: Double => Double = (side: Double) =>
     {
-        lato * lato * 1.72f
+        side * side * 1.72f
     }
-    val esagonoComputer: Double => Double = (lato: Double) =>
+
+    // Hexagon area formula: l * (l * 0,866) * 3 = l^2 * 2,598
+    val hexagonComputer: Double => Double = (side: Double) =>
     {
-        lato * lato * 2.598f
+        side * side * 2.598f
     }
 
     // polyAreaComputer is a higher class function: a function that
     // takes in input another function
-    def polyAreaComputer(lato: Double,
+    def polyAreaComputer(side: Double,
                          areaCompute: Double => Double): Double =
     {
-        areaCompute(lato)
+        areaCompute(side)
     }
 
     def printOutput(): Unit =
     {
-        val latoPentagono: Double = 5.0f
-        val latoEsagono: Double = 6.0f
+        val pentagonSide: Double = 5.0f
+        val hexagonSide: Double = 6.0f
         new ResultsPrinter("HighOrder 1/2").
-                printDetail(polyAreaComputer(latoPentagono, pentagonoComputer))
+                printDetail(polyAreaComputer(pentagonSide, pentagonComputer))
         new ResultsPrinter("HighOrder 2/2").
-                printDetail(polyAreaComputer(latoEsagono, esagonoComputer))
+                printDetail(polyAreaComputer(hexagonSide, hexagonComputer))
     }
 
 }

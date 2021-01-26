@@ -24,7 +24,7 @@ object Switch
 
     def test(): Unit =
     {
-        val test: Printer = new Printer("Match Test")
+        val test = new ResultsPrinter("Match Test")
         test += this.tryMatch(17)
         test += this.tryMatch("hello")
         test += this.tryMatch("a dragon")

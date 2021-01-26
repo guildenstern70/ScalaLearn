@@ -28,7 +28,7 @@ class ResultsPrinter(testName: String)
 
     def +=(result: String): Unit =
     {
-        ResultsPrinter.this.addResult(result)
+        this.addResult(result)
     }
 
     def addResult(result: String): Unit =
@@ -38,15 +38,15 @@ class ResultsPrinter(testName: String)
 
     def printDetail(result: Any): Unit =
     {
-        ResultsPrinter.this.addResult(result.toString)
-        ResultsPrinter.this.print()
+        this.addResult(result.toString)
+        this.print()
     }
 
     def printDetails(results: Iterator[Any]): Unit =
     {
         results.foreach
-        { i => ResultsPrinter.this.addResult("> Value = %s".format(i.toString)) }
-        ResultsPrinter.this.print()
+        { i => this.addResult("> Value = %s".format(i.toString)) }
+        this.print()
     }
 
     // scalastyle:off println

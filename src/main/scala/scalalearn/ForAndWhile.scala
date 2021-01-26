@@ -24,7 +24,7 @@ import scala.collection.mutable.ListBuffer
 object ForAndWhile extends LearningModule
 {
 
-    val someNumbers = Array(1, 2, 3, 4, 5)
+    val someNumbers: Array[Int] = Array(1, 2, 3, 4, 5)
     var results = new ListBuffer[Int]()
     var testName: String = ""
 
