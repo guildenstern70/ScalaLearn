@@ -28,6 +28,12 @@ object ForAndWhile extends LearningModule
     var results = new ListBuffer[Int]()
     var testName: String = ""
 
+    // Best compromise between functional and imperative
+    List.range(0, 10).foreach
+    { i =>
+        results.append(i)
+    }
+
     // Iterate over a list
     // var j; can be omitted!
     for (j <- someNumbers)

@@ -12,17 +12,16 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
-  *
-  * You should have received a copy of the GNU General Public License
-  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  *
-  */
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
-package scalalearn.tests
+package scalalearn
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
-import scalalearn.ListAndTuple
 
 class ListAndTupleSpec extends AnyFlatSpec with should.Matchers
 {
@@ -38,16 +37,17 @@ class ListAndTupleSpec extends AnyFlatSpec with should.Matchers
     "The #2 list" should "contain expected values" in
             {
 
-        ListAndTuple.myList2 should be (List(1, 2, 3, 4))
+                ListAndTuple.myList2 should be(List(1, 2, 3, 4))
 
-    }
+            }
 
-    "The tuple" should "contain expected values" in {
+    "The tuple" should "contain expected values" in
+            {
 
-        ListAndTuple.myTuple._1 should be (77)
-        ListAndTuple.myTuple._2 should be ("Alessio")
-        ListAndTuple.myTuple._3 should be (345.7)
+                ListAndTuple.myTuple._1 should be(77)
+                ListAndTuple.myTuple._2 should be("Alessio")
+                ListAndTuple.myTuple._3 should be(345.7)
 
-    }
+            }
 
 }

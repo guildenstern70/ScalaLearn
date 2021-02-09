@@ -31,7 +31,7 @@ object Collections extends LearningModule
     --> See MutableAndImmutableSet
 
     Normal object collections -> See List in ListAndTuple
-    Collections of different object -> See Tuple in ListAndTuple
+    Collections of different type of objects -> See Tuple in ListAndTuple
 
      */
 

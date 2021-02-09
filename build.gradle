@@ -32,7 +32,13 @@ test {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
+}
+
+task spec(dependsOn: ['testClasses'], type: JavaExec) {
+    main = 'org.scalatest.tools.Runner'
+    args = ['-R', 'build/classes/scala/test', '-o']
+    classpath = sourceSets.test.runtimeClasspath
 }
 
 dependencies {
@@ -40,6 +46,9 @@ dependencies {
     testImplementation group:'org.scalatest', name: 'scalatest_2.13', version: '3.2.3'
     testImplementation group:'junit', name: 'junit', version: '4.+'
 }
+
+test.dependsOn spec
+
 
 
 

@@ -12,37 +12,28 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
-  *
-  * You should have received a copy of the GNU General Public License
-  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  *
-  */
-
-package scalalearn.tests
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+package scalalearn
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
-import scalalearn.MutableAndImmutableSet
 
-class MutableAndImmutableSetSpec extends AnyFlatSpec with should.Matchers
+
+class ClosureSpec extends AnyFlatSpec with should.Matchers
 {
 
-    "The given set" should "cointain the expected number of elements" in
+    "Closure" should "contain expected values" in
             {
 
-                MutableAndImmutableSet.jetSet.size should be(3)
+                // The list 'someNumbers' exists even if
+                // we did not instantiate the Closure object
+                val closure = Closure.closure(4)
 
+                closure.sum should be(41)
             }
-
-    it should "only contain unique items" in
-            {
-
-                // We try to add an element that is already present
-        MutableAndImmutableSet.jetSet += "Lear"
-        MutableAndImmutableSet.jetSet.size should be (3)
-
-    }
-
-
 
 }
