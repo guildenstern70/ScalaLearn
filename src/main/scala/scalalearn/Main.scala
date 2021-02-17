@@ -61,6 +61,7 @@ object Main
         useCases.append(Collections)
         useCases.append(Implicits)
         useCases.append(MapReduce)
+        useCases.append(ByNameParam)
 
         useCases.foreach(_.printOutput())
 
