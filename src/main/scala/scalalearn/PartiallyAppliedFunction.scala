@@ -23,17 +23,19 @@ object PartiallyAppliedFunction extends LearningModule
 {
     var resultsList: List[Int] = List[Int]()
 
-    def myFunction(a: Int, b: Int, c: Int): Int = (a * b) + c
+    def plus(a: Int)(b: Int)(c: Int): Int = a + b + c
 
-    // 'functor' is a partially applied function
-    val functor: (Int, Int, Int) => Int = myFunction _
-    val result: Int = functor(4, 5, 6)
+    def plus2: (Int, Int) => Int = plus(2)(_)(_)
+
+    // 'plus2' is a partially applied function
+    val result: Int = plus2(4, 4)  // => 10
 
     resultsList = result :: resultsList
 
     def printOutput(): Unit =
     {
-        new ResultsPrinter("Partially Applied Function").printDetails(resultsList.iterator)
+        new ResultsPrinter("Partially Applied Function")
+                .printDetails(resultsList.iterator)
     }
 
 }
