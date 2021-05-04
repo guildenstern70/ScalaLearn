@@ -100,8 +100,8 @@ class ClassTemplate(pName: String, pSurname: String)
     // NOTE: both getter and setter must be present in order to work!
     private var _position = "Unknown"
 
-    def position: String = _position // Getter
-    def position_=(value: String): Unit = _position = value // Setter
+    def position: String = this._position // Getter
+    def position_=(value: String): Unit = this._position = value // Setter
 
     // Override 'Any' method: hashCode (Any method '##' is final
     // and cannot be overridden

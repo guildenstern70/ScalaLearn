@@ -26,16 +26,20 @@ object Shapes extends LearningModule
     {
         println("** TEST Inheritance **")
 
-        val shapes: List[Shape] = List(
+        val shapes: List[Option[Shape]] = List(
             ShapeFactory.create(ShapeType.Circle),
             ShapeFactory.create(ShapeType.Triangle),
             ShapeFactory.create(ShapeType.Square))
 
         shapes.foreach(shape =>
         {
-            println(" -> " + shape.toString)
-            println(" -> Area = " + shape.area.toString)
-            println()
+            if (shape.isDefined)
+            {
+                println(" -> " + shape.get.toString)
+                println(" -> Area = " + shape.get.area.toString)
+                println()
+            }
+
         })
     }
     // scalastyle:on println

@@ -22,16 +22,19 @@ import scalalearn.inheritance.ShapeType.ShapeType
 object ShapeFactory
 {
 
-    def create(shapeType: ShapeType): Shape =
+    def create(shapeType: ShapeType): Option[Shape] =
     {
         shapeType match
         {
-            case ShapeType.Circle => new Circle("Circle", this.randomDouble)
-            case ShapeType.Triangle => new Triangle("Triangle",
+            case ShapeType.Circle => Some(
+                new Circle("Circle", this.randomDouble))
+            case ShapeType.Triangle => Some(
+                new Triangle("Triangle",
                                                     this.randomDouble,
-                                                    this.randomDouble)
-            case ShapeType.Square => new Square("Square", this.randomDouble)
-            case _ => null
+                                                    this.randomDouble))
+            case ShapeType.Square => Some(
+                new Square("Square", this.randomDouble))
+            case _ => None
         }
     }
 
