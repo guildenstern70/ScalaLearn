@@ -1,5 +1,5 @@
 /**
- * Scala Learn Tests
+ * ScalaLearn Tests
  *
  * Copyright (C) Alessio Saltarin - 2013-21
  *

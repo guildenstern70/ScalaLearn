@@ -1,5 +1,5 @@
 /**
- * Scala Learn
+ * ScalaLearn
  *
  * Copyright (C) Alessio Saltarin - 2013-21
  *
