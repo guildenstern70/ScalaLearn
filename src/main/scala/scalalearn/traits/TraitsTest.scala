@@ -1,4 +1,3 @@
-//
 // ScalaLearn
 //
 // Copyright (C) Alessio Saltarin - 2013-21
@@ -16,8 +15,6 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
-//
-
 package scalalearn.traits
 
 import scalalearn.{ClassTemplate, LearningModule, ResultsPrinter}

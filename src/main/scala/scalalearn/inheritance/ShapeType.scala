@@ -20,12 +20,14 @@
 
 package scalalearn.inheritance
 
+import scalalearn.inheritance
+
 object ShapeType extends Enumeration
 {
     type ShapeType = Value
 
-    val Circle = Value("Circle")
-    val Square = Value("Square")
-    val Triangle = Value("Triangle")
-    val Unknown = Value("Unknown")
+    val Circle: inheritance.ShapeType.Value = Value("Circle")
+    val Square: inheritance.ShapeType.Value = Value("Square")
+    val Triangle: inheritance.ShapeType.Value = Value("Triangle")
+    val Unknown: inheritance.ShapeType.Value = Value("Unknown")
 }
