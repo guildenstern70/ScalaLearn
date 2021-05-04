@@ -33,13 +33,15 @@ object Shapes extends LearningModule
 
         shapes.foreach(shape =>
         {
-            if (shape.isDefined)
-            {
-                println(" -> " + shape.get.toString)
-                println(" -> Area = " + shape.get.area.toString)
-                println()
+            shape match {
+                case Some(shape) =>
+                {
+                    println(" -> " + shape.toString)
+                    println(" -> Area = " + shape.area.toString)
+                    println()
+                }
+                case None => println("Unknown shape")
             }
-
         })
     }
     // scalastyle:on println

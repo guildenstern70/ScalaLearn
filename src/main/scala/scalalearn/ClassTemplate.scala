@@ -36,7 +36,7 @@ class ClassTemplate(pName: String, pSurname: String)
     require(pSurname != null)
 
     // Auxiliary constructor
-    def this() = this("Unknown", "Unknown")
+    def this() = this("NoName", "NoSurname")
 
     // Methods
     // Parameters are VAL not VAR
