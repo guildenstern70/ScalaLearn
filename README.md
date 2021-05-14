@@ -17,11 +17,10 @@ A collection of simple source code examples in Scala, featuring key aspects of t
 
 ## Build with SBT
 
- 1. Download 'sbt' here: http://www.scala-sbt.org/download.html
- 2. Install sbt package
- 3. Change dir to the project dir
- 4. Compile with _sbt clean compile_
- 5. Run with _sbt run_
+ 1. Install 'sbt' from here: http://www.scala-sbt.org/download.html
+ 2. Change dir to the project dir
+ 3. Compile with _sbt clean compile_
+ 4. Run with _sbt run_
 
 
 
