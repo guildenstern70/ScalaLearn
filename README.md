@@ -5,22 +5,16 @@
 
 A collection of simple source code examples in Scala, featuring key aspects of the language.
 
-## Build with Gradle
-
- 1. Download 'gradle' here: http://www.gradle.org/downloads
- 2. Extract Gradle and add 'bin\' to path
- 3. Change dir to project dir
- 4. For a comprehensive list of available tasks, run 'gradle tasks'
- 5. Compile with _gradle assemble_
- 6. Run with _gradle run_
- 7. Run tests with _gradle check_
-
 ## Build with SBT
 
  1. Install 'sbt' from here: http://www.scala-sbt.org/download.html
  2. Change dir to the project dir
- 3. Compile with _sbt clean compile_
- 4. Run with _sbt run_
+ 3. Run a sbt shell with _sbt_   
+ 4. Compile with _compile_
+ 5. Run with _run_
+ 6. Execute tests with _test_
+
+
 
 
 
