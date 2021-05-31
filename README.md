@@ -14,6 +14,13 @@ A collection of simple source code examples in Scala, featuring key aspects of t
  5. Run with _run_
  6. Execute tests with _test_
 
+## Scala 3
+
+Branch
+
+    scala3
+
+contains the same project, but in Scala v3 (Dotty).
 
 
 
