@@ -42,8 +42,9 @@ class ResultsPrinter(testName: String)
 
     def printDetails(results: Iterator[Any]): Unit =
     {
-        results.foreach
-        { i => this.addResult("> Value = %s".format(i.toString)) }
+        results.foreach {
+            (i: Any) => this.addResult("> Value = %s".format(i.toString))
+        }
         this.print()
     }
 

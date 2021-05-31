@@ -17,6 +17,7 @@
 //
 package scalalearn
 
+import scala.language.implicitConversions
 
 /**
  * Implicit conversions do not need to be explicitly called.

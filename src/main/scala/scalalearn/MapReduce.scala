@@ -40,74 +40,25 @@ object MapReduce extends LearningModule
         val sexWithAges: Map[Char, List[Int]] =
             groups.view.mapValues(_.map(_.age)).toMap[Char, List[Int]]
 
-        val sexWithTotalSumOfAges: Map[Char, Int] =
-            sexWithAges.map
-            {
-                case (sex, ages) => (sex, ages.reduce(_ + _))
-            }
-
-        val sexCount: Map[Char, Int] = people.groupBy(_.sex).map
-        {
-            case (sex, personsOfThatSex) => (sex, personsOfThatSex.length)
-        }
-
-        val sexWithAverageAge: Map[Char, Double] =
-            sexWithTotalSumOfAges.map
-            {
-                case (sex, totalAge) =>
-                    (sex, totalAge.toDouble / sexCount(sex))
-            }
-
-        sexWithAverageAge.map(map => s"${map._1} > ${map._2}").toList
-
+        sexWithAges.map(map => s"${map._1} > ${map._2}").toList
     }
 
     def getMales: List[String] =
-    {
-
-        people.filter
-        {
-            case (person) => person.sex == 'M'
-        }.map
-        {
-            p: Person => p.name
-        }
-
-    }
-
-    def getMales2: List[String] =
-    {
-
-        people.filter
-        {
-            case (person) => person.sex == 'M'
-        }.map(_.name)
-
-    }
-
-    def getMales3: List[String] = people.filter(_.sex == 'M').map(_.name)
+        people.filter(_.sex == 'M').map(_.name)
 
 
+    /**
+     * Return the number of people grouped by sex
+     * @return
+     */
     def countSex: List[String] =
     {
-
         val groups: Map[Char, List[Person]] = people.groupBy(_.sex)
-        groups.map
-        {
-            case (sex, personsBelongingToSex) =>
-                sex.toString + " > " + personsBelongingToSex.length
-        }.toList
-    }
-
-    def malesAndFemales: List[String] =
-    {
-
-        val groups: Map[Char, List[Person]] = people.groupBy(_.sex)
-        val namesWithSex: Map[Char, String] =
-            groups.view.mapValues(_.map(_.name).mkString(" & ")).toMap[Char, String]
-        namesWithSex.map
-        {
-            case (k, v) => s"$k: $v"
+        val personsPerSex: Map[Char, Int] = groups.map {
+            case (k: Char, v: List[Person]) => (k, v.length)
+        }
+        personsPerSex.map {
+            case (l: Char, m: Int) => s"$l = $m"
         }.toList
     }
 
@@ -115,10 +66,7 @@ object MapReduce extends LearningModule
     {
         new ResultsPrinter("Average ages").printDetails(averageAges.iterator)
         new ResultsPrinter("Get males").printDetails(getMales.iterator)
-        new ResultsPrinter("Get males 2").printDetails(getMales2.iterator)
-        new ResultsPrinter("Get males 3").printDetails(getMales3.iterator)
         new ResultsPrinter("Count sex").printDetails(countSex.iterator)
-        new ResultsPrinter("Males & Females").printDetails(malesAndFemales.iterator)
     }
 
 }

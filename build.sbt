@@ -1,9 +1,12 @@
-name := "Scala Learn"
+val scala3Version = "3.0.0"
 
-version := "0.7"
+lazy val root = project
+        .in(file("."))
+        .settings(
+            name := "Scala Learn",
+            version := "0.8",
+            scalaVersion := scala3Version,
+            libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.9",
+            libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % "test"
+        )
 
-scalaVersion := "2.13.5"
-
-libraryDependencies += "org.scalatest" % "scalatest_2.13" % "3.2.3" % "test"
-
-libraryDependencies += "junit" % "junit" % "4.+"

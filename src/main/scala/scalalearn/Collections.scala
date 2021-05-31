@@ -72,8 +72,7 @@ object Collections extends LearningModule
 
         val test = new ResultsPrinter("COLLECTIONS (MAPS)")
 
-        dictionary.keys.foreach
-        { i =>
+        dictionary.keys.foreach { (i: Int) =>
             test.addResult("Key = " + i)
             test.addResult("Value = " + dictionary(i))
         }
