@@ -6,6 +6,7 @@ lazy val root = project
             name := "Scala Learn",
             version := "0.8",
             scalaVersion := scala3Version,
+            scalacOptions ++= Seq("-deprecation", "-feature", "-language:implicitConversions"),
             libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.3" % "test",
             libraryDependencies += "junit" % "junit" % "4.+"
         )
