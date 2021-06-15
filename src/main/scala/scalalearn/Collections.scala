@@ -24,9 +24,12 @@ object Collections extends LearningModule
 {
     /*
 
-    Collections in Scala can be Mutable (fast add and remove) or
-    Immutable (very slow add and remove)
-    --> See MutableAndImmutableSet
+    Collections are arrays of the same type of objects, containing
+    a variable number of items.
+
+    Collections in Scala can be Mutable (fast add/remove, slow read) or
+    Immutable (very slow add/remove, very fast read)
+    --> See also MutableAndImmutableSet
 
     Normal object collections -> See List in ListAndTuple
     Collections of different type of objects -> See Tuple in ListAndTuple

@@ -64,7 +64,7 @@ object ForAndWhile extends LearningModule
 
     // For comprehension
     for
-        {
+    {
         (x, i) <- ints.zipWithIndex
         if i % 2 != 0
     } yield x
