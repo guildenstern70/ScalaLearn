@@ -19,14 +19,26 @@ package scalalearn
 
 object Recursion extends LearningModule
 {
+    /**
+     * This function is recursive.
+     * It iteratively take out the head of the list and adds up it with the tail
+     *   List :: List => Prepend, see ListAndTuple
+     *   This can be read as:
+     *   if (intList == intList.head :: intList.tail) { head = intList.head; tail = intList.tail }
+     * @param intList List to be added up
+     * @return Sum of the list items
+     */
     def recursiveSum1(intList: List[Int]): Int = intList match {
         case Nil => 0
         case head :: tail => head + recursiveSum1(tail)
-        // List :: List => Prepend, see ListAndTuple
-        // This can be read as:
-        // if (intList == intList.head :: intList.tail) { head = intList.head; tail = intList.tail }
     }
 
+    /**
+     * This function is tail recursive.
+     * It iteratively sum the items and returns the sum each iteration
+     * @param intList List to be added up
+     * @return Sum of the list items
+     */
     def recursiveSum2(intList: List[Int], sum: Int, index: Int): Int =
     {
         if (intList.length == index)
@@ -36,6 +48,12 @@ object Recursion extends LearningModule
         recursiveSum2(intList, sum + intList(index), index + 1)
     }
 
+    /**
+     * This function is recursive.
+     * It iteratively take out the head of the list and adds up it with the tail
+     * @param intList List to be added up
+     * @return Sum of the list items
+     */
     def recursiveSum3(intList: List[Int]): Int =
     {
         if (intList == List()) return 0
