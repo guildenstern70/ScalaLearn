@@ -17,7 +17,7 @@
 //
 package scalalearn
 
-abstract class LearningModule
+trait LearningModule
 {
     def printOutput(): Unit
 }
