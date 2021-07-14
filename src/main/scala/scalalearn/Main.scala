@@ -30,7 +30,7 @@ import scala.collection.mutable.ListBuffer
 object Main
 {
 
-    final val VERSION = "v.0.7.1025"
+    final val VERSION = "v.0.9"
 
     def main(args: Array[String]): Unit =
     {
@@ -61,6 +61,7 @@ object Main
         useCases.append(Implicits)
         useCases.append(MapReduce)
         useCases.append(ByNameParam)
+        useCases.append(Recursion)
 
         useCases.foreach(_.printOutput())
 

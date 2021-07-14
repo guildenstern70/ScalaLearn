@@ -17,18 +17,24 @@
 //
 package scalalearn
 
-import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.should
-
-
-class MapForEachAndSoOnSpec extends AnyFlatSpec with should.Matchers
+object Recursion extends LearningModule
 {
-    "Maps and so on" should "contain expected values" in
-            {
-                MapForEachAndSoOn.numbersMap().sum should be(42)
-                MapForEachAndSoOn.eachNumber() should be(21)
-                MapForEachAndSoOn.numbersSum() should be(21)
-            }
 
+    def recursiveSum(intList: List[Int], sum: Int, index: Int): Int =
+    {
+        if (intList.length == index)
+        {
+            return sum
+        }
+        recursiveSum(intList, sum + intList(index), index + 1)
+    }
+
+    def recursionApplied(): Int =
+    {
+        val someNumbers = List(111, 222, 333, 444, 555)
+        this.recursiveSum(someNumbers, 0, 0)
+    }
+
+    override def printOutput(): Unit =
+        new ResultsPrinter("Recursion").printDetail(this.recursionApplied())
 }
-

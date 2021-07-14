@@ -8,11 +8,23 @@ A collection of simple source code examples in Scala, featuring key aspects of t
 ## Build with SBT
 
  1. Install 'sbt' from here: http://www.scala-sbt.org/download.html
- 2. Change dir to the project dir
- 3. Run a sbt shell with _sbt_   
- 4. Compile with _compile_
- 5. Run with _run_
- 6. Execute tests with _test_
+ 2. Run a sbt shell with 
+    
+        cd [project dir]
+        sbt
+    
+ 4. Compile with 
+    
+        compile
+    
+
+ 5. Run with
+    
+        run
+    
+ 6. Execute tests with
+
+        test
 
 ## Scala 3
 

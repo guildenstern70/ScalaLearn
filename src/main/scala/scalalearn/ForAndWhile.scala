@@ -28,7 +28,9 @@ object ForAndWhile extends LearningModule
 
     // Best compromise between functional and imperative
     List.range(0, 10).foreach
-        results.append
+    { i =>
+        results.append(i)
+    }
 
     // Iterate over a list
     // var j; can be omitted!
@@ -54,13 +56,21 @@ object ForAndWhile extends LearningModule
 
     // Yielding
     val ints: Array[Int] = for (a <- someNumbers) yield a * 2
-    ints.foreach {
-        this.results += (_ : Int)
+    ints.foreach
+    {
+        this.results += _
     }
     this.printOutput("YIELD")
 
-    ints.foreach {
-        this.results += (_:Int)
+    // For comprehension
+    for
+    {
+        (x, i) <- ints.zipWithIndex
+        if i % 2 != 0
+    } yield x
+    ints.foreach
+    {
+        this.results += _
     }
     this.printOutput("FOR COMPREHENSION")
 
