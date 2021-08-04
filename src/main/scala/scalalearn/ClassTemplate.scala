@@ -79,10 +79,10 @@ class ClassTemplate(pName: String, pSurname: String) extends LearningModule {
 
   // Getters and setters
   // NOTE: both getter and setter must be present in order to work!
-  private var _position = "Unknown"
+  private var privatePosition = "Unknown"
 
-  def position: String = this._position // Getter
-  def position_=(value: String): Unit = this._position = value // Setter
+  def position: String = this.privatePosition // Getter
+  def position_=(value: String): Unit = this.privatePosition = value // Setter
 
   // Override 'Any' method: hashCode (Any method '##' is final
   // and cannot be overridden

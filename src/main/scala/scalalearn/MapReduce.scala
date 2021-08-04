@@ -20,15 +20,13 @@ object MapReduce extends LearningModule {
 
   val people = List(person1, person2, person3, person4)
 
-  def averageAges: List[String] = {
-
-    val groups: Map[Char, List[Person]] = people.groupBy(_.sex)
-
-    val sexWithAges: Map[Char, List[Int]] =
-      groups.view.mapValues(_.map(_.age)).toMap[Char, List[Int]]
-
-    sexWithAges.map(map => s"${map._1} > ${map._2}").toList
-  }
+  def averageAges: List[String] =
+      people.groupBy(_.sex)
+        .view
+        .mapValues(_.map(_.age))
+        .toMap[Char, List[Int]]
+        .map(map => s"${map._1} > ${map._2}")
+        .toList
 
   def getMales: List[String] =
     people.filter(_.sex == 'M').map(_.name)

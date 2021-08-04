@@ -11,13 +11,14 @@ package scalalearn
   */
 object Options extends LearningModule {
 
-  def removeExcept(someString: String): Option[String] = {
+  def removeExcept(someString: String): Option[String] =
     if (someString.startsWith("!")) {
-      return None
+      None
+    } else {
+      Some(someString.substring(1))
     }
 
-    Some(someString.substring(1))
-  }
+
 
   def printOutput(): Unit = {
 

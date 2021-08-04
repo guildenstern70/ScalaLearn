@@ -11,9 +11,9 @@ package scalalearn
 abstract class TryCatch extends LearningModule {
 
   def trycatch(): Unit = {
-    try { // scalastyle:ignore
+    try {     // scalastyle:ignore
       // your code here
-    } catch {
+    } catch { // scalastyle:ignore
       case _: IndexOutOfBoundsException => print("Index Out Of Bounds")
       case bar: NotImplementedError =>
         print("Not implemented: " + bar.getLocalizedMessage)

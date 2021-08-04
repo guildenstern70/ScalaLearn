@@ -15,7 +15,7 @@ object Implicits extends LearningModule {
 
   case class NumberString(number: String)
 
-  implicit def NumberStringToNumber(d: NumberString): Int =
+  implicit def numberStringToInt(d: NumberString): Int =
     d.number.toInt
 
   override def printOutput(): Unit = {
