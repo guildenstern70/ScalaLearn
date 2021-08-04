@@ -25,7 +25,7 @@ object MapReduce extends LearningModule {
         .view
         .mapValues(_.map(_.age))
         .toMap[Char, List[Int]]
-        .map(map => s"${map._1} > ${map._2}")
+        .map(item => s"${item._1} > ${item._2}")
         .toList
 
   def getMales: List[String] =
