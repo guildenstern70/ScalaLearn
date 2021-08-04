@@ -12,52 +12,47 @@ import scalalearn.traits.TraitsTest
 
 import scala.collection.mutable.ListBuffer
 
-
-/**
- * Main application launcher
-  *
+/** Main application launcher
   */
-object Main
-{
+object Main {
 
-    final val VERSION = "v.0.9"
+  final val VERSION = "v.0.9"
 
-    def main(args: Array[String]): Unit =
-    {
+  def main(args: Array[String]): Unit = {
 
-        // scalastyle:off println
-        println(s"ScalaLearn $VERSION")
-        println("")
-        // scalastyle:off println
+    // scalastyle:off println
+    println(s"ScalaLearn $VERSION")
+    println("")
+    // scalastyle:off println
 
-        val useCases = new ListBuffer[LearningModule]()
+    val useCases = new ListBuffer[LearningModule]()
 
-        useCases.append(ListAndTuple)
-        useCases.append(MutableAndImmutableSet)
-        useCases.append(FirstClassFunctions)
-        useCases.append(Closure)
-        useCases.append(MapForEachAndSoOn)
-        useCases.append(HighOrderFunction)
-        useCases.append(Currying)
-        useCases.append(Shapes)
-        useCases.append(TraitsTest)
-        useCases.append(Arrays)
-        useCases.append(ForAndWhile)
-        useCases.append(PartiallyAppliedFunction)
-        useCases.append(CaseClasses)
-        useCases.append(new ClassTemplate("John", "Way"))
-        useCases.append(Options)
-        useCases.append(Collections)
-        useCases.append(Implicits)
-        useCases.append(MapReduce)
-        useCases.append(ByNameParam)
-        useCases.append(Recursion)
+    useCases.append(ListAndTuple)
+    useCases.append(MutableAndImmutableSet)
+    useCases.append(FirstClassFunctions)
+    useCases.append(Closure)
+    useCases.append(MapForEachAndSoOn)
+    useCases.append(HighOrderFunction)
+    useCases.append(Currying)
+    useCases.append(Shapes)
+    useCases.append(TraitsTest)
+    useCases.append(Arrays)
+    useCases.append(ForAndWhile)
+    useCases.append(PartiallyAppliedFunction)
+    useCases.append(CaseClasses)
+    useCases.append(new ClassTemplate("John", "Way"))
+    useCases.append(Options)
+    useCases.append(Collections)
+    useCases.append(Implicits)
+    useCases.append(MapReduce)
+    useCases.append(ByNameParam)
+    useCases.append(Recursion)
 
-        useCases.foreach(_.printOutput())
+    useCases.foreach(_.printOutput())
 
-        println()
-        println("All done. Bye.")
+    println()
+    println("All done. Bye.")
 
-    }
+  }
 
 }

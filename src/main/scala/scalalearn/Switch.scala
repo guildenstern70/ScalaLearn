@@ -7,25 +7,22 @@
  */
 package scalalearn
 
-object Switch
-{
+object Switch {
 
-    def test(): Unit =
-    {
-        val test = new ResultsPrinter("Match Test")
-        test += this.tryMatch(17)
-        test += this.tryMatch("hello")
-        test += this.tryMatch("a dragon")
-        test.print()
-    }
+  def test(): Unit = {
+    val test = new ResultsPrinter("Match Test")
+    test += this.tryMatch(17)
+    test += this.tryMatch("hello")
+    test += this.tryMatch("a dragon")
+    test.print()
+  }
 
-    def tryMatch(any: Any): String = any match
-    {
-        case 17 => "Seventeen"
-        case true => "truth"
-        case "hello" => "hi!"
-        case Nil => "null"
-        case _ => "something else"
-    }
+  def tryMatch(any: Any): String = any match {
+    case 17      => "Seventeen"
+    case true    => "truth"
+    case "hello" => "hi!"
+    case Nil     => "null"
+    case _       => "something else"
+  }
 
 }

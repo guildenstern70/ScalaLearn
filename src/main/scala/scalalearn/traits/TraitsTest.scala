@@ -9,50 +9,50 @@ package scalalearn.traits
 
 import scalalearn.{ClassTemplate, LearningModule, ResultsPrinter}
 
-object TraitsTest extends LearningModule
-{
+object TraitsTest extends LearningModule {
 
-    class ClassWithTraits extends Speaking with Dancing
-    {
+  class ClassWithTraits extends Speaking with Dancing {
 
-        def test(): Unit =
-        {
-            this.speak();
-            this.dance();
-        }
-
+    def test(): Unit = {
+      this.speak();
+      this.dance();
     }
 
-    // Class template is a class with a name and a surname
-    // The Stackable Traits in 'StackableTrait' modify the name,
-    // by adding 'XXX' and 'YYY' to the name,
-    // Here you can see how we can 'Stack' the traits together
-    class ClassTemplateWithXXX(smName: String, smSurname: String)
-            extends ClassTemplate(smName, smSurname) with AddXXXStackableTrait
+  }
 
-    // Try to invert the traits here!
-    // (order is important!!)
-    class ClassTemplateWithXXXandYYY(smName: String, smSurname: String)
-            extends ClassTemplate(smName, smSurname)
-                    with AddYYYStackableTrait with AddXXXStackableTrait
+  // Class template is a class with a name and a surname
+  // The Stackable Traits in 'StackableTrait' modify the name,
+  // by adding 'XXX' and 'YYY' to the name,
+  // Here you can see how we can 'Stack' the traits together
+  class ClassTemplateWithXXX(smName: String, smSurname: String)
+      extends ClassTemplate(smName, smSurname)
+      with AddXXXStackableTrait
 
-    val objectWithTraits = new TraitsTest.ClassWithTraits
-    val firstObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXX("Pippo", "Rossi")
-    val secondObjWithStackedTraits = new TraitsTest.ClassTemplateWithXXXandYYY("Pippo", "Rossi")
+  // Try to invert the traits here!
+  // (order is important!!)
+  class ClassTemplateWithXXXandYYY(smName: String, smSurname: String)
+      extends ClassTemplate(smName, smSurname)
+      with AddYYYStackableTrait
+      with AddXXXStackableTrait
 
-    def printOutput(): Unit =
-    {
+  val objectWithTraits = new TraitsTest.ClassWithTraits
+  val firstObjWithStackedTraits =
+    new TraitsTest.ClassTemplateWithXXX("Pippo", "Rossi")
+  val secondObjWithStackedTraits =
+    new TraitsTest.ClassTemplateWithXXXandYYY("Pippo", "Rossi")
 
-        val test = new ResultsPrinter("Traits")
+  def printOutput(): Unit = {
 
-        test += "This object speaks and dance:"
-        test += objectWithTraits.speak()
-        test += objectWithTraits.dance()
-        test += "This one has a stackable (added, mixed) traits:"
-        test += firstObjWithStackedTraits.name
-        test += secondObjWithStackedTraits.name
+    val test = new ResultsPrinter("Traits")
 
-        test.print()
-    }
+    test += "This object speaks and dance:"
+    test += objectWithTraits.speak()
+    test += objectWithTraits.dance()
+    test += "This one has a stackable (added, mixed) traits:"
+    test += firstObjWithStackedTraits.name
+    test += secondObjWithStackedTraits.name
+
+    test.print()
+  }
 
 }

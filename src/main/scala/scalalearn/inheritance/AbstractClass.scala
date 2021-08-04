@@ -7,9 +7,8 @@
  */
 package scalalearn.inheritance
 
-abstract class AbstractClass
-{
-    def name: String
+abstract class AbstractClass {
+  def name: String
 
-    def area: Double
+  def area: Double
 }

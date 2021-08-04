@@ -7,7 +7,6 @@
  */
 package scalalearn
 
-trait LearningModule
-{
-    def printOutput(): Unit
+trait LearningModule {
+  def printOutput(): Unit
 }

@@ -7,7 +7,6 @@
  */
 package scalalearn.traits
 
-trait Dancing
-{
-    def dance(): String = "I am dancing."
+trait Dancing {
+  def dance(): String = "I am dancing."
 }

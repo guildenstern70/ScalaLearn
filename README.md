@@ -4,7 +4,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8fdfd071d50a419f968bfb9657c38c1f)](https://www.codacy.com/gh/guildenstern70/ScalaLearn/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=guildenstern70/ScalaLearn&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A collection of simple source code examples in Scala, featuring key aspects of the language.
+A collection of simple source code examples in Scala 3, featuring key aspects of the language.
 
 ## Build with SBT
 
@@ -26,14 +26,7 @@ A collection of simple source code examples in Scala, featuring key aspects of t
  6. Execute tests with
 
         test
-
-## Scala 3
-
-Branch
-
-    scala3
-
-contains the same project, but in Scala v3 (Dotty).
+ 
 
 
 

@@ -8,22 +8,18 @@
 package scalalearn
 
 import scala.collection.mutable
-import scala.jdk.CollectionConverters._
+import scala.jdk.CollectionConverters.*
 
-/**
- * Java List converted to Scala list
- * (in this case it's necessary because
- * withFilter (<-) is not a member of java.util.ArrayList[String])
- */
-abstract class JavaConversion extends LearningModule
-{
+/** Java List converted to Scala list (in this case it's necessary because
+  * withFilter (<-) is not a member of java.util.ArrayList[String])
+  */
+abstract class JavaConversion extends LearningModule {
 
-    val javaList = new java.util.ArrayList[String](10)
-    val scalaList: mutable.Seq[String] = javaList.asScala
+  val javaList = new java.util.ArrayList[String](10)
+  val scalaList: mutable.Seq[String] = javaList.asScala
 
-    for (item: String <- scalaList)
-    {
-        print(item)
-    }
+  for (item: String <- scalaList) {
+    print(item)
+  }
 
 }

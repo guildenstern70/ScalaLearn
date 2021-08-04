@@ -10,21 +10,17 @@ package scalalearn
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 
+/** Class Template Tests
+  */
+class ClassTemplateSpec extends AnyFlatSpec with should.Matchers {
 
-/**
- * Class Template Tests
- */
-class ClassTemplateSpec extends AnyFlatSpec with should.Matchers
-{
+  "Class Attributes" should "contain expected values" in {
 
-    "Class Attributes" should "contain expected values" in
-            {
+    val cTempl = new ClassTemplate("Alessio", "Saltarin")
 
-                val cTempl = new ClassTemplate("Alessio", "Saltarin")
+    cTempl.name should be("Alessio")
+    cTempl.surname should be("Saltarin")
 
-                cTempl.name should be("Alessio")
-                cTempl.surname should be("Saltarin")
-
-            }
+  }
 
 }

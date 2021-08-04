@@ -9,15 +9,13 @@ package scalalearn.inheritance
 
 import scalalearn.inheritance.ShapeType.ShapeType
 
-class Square(override val shapeName: String,
-             val shapeSide: Double) extends Shape(shapeName)
-{
+class Square(override val shapeName: String, val shapeSide: Double)
+    extends Shape(shapeName) {
 
-    override def area: Double =
-    {
-        this.shapeSide * this.shapeSide
-    }
+  override def area: Double = {
+    this.shapeSide * this.shapeSide
+  }
 
-    override def shapeType: ShapeType = ShapeType.Square
+  override def shapeType: ShapeType = ShapeType.Square
 
 }

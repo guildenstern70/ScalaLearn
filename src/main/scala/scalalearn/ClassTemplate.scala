@@ -7,107 +7,97 @@
  */
 package scalalearn
 
-/**
- * A template for a common class in Scala
- *
- * @param pName    : A parameter
- * @param pSurname : Another parameter
- */
-class ClassTemplate(pName: String, pSurname: String)
-        extends LearningModule
-{
+/** A template for a common class in Scala
+  *
+  * @param pName
+  *   : A parameter
+  * @param pSurname
+  *   : Another parameter
+  */
+class ClassTemplate(pName: String, pSurname: String) extends LearningModule {
 
-    // Constructor
-    protected val objName: String = pName
-    protected val objSurname: String = pSurname
+  // Constructor
+  protected val objName: String = pName
+  protected val objSurname: String = pSurname
 
-    // Preconditions
-    require(pName != null)
-    require(pSurname != null)
+  // Preconditions
+  require(pName != null)
+  require(pSurname != null)
 
-    // Auxiliary constructor
-    def this() = this("NoName", "NoSurname")
+  // Auxiliary constructor
+  def this() = this("NoName", "NoSurname")
 
-    // Methods
-    // Parameters are VAL not VAR
-    // Also note the return type = Int
-    def newFunction(a: Int, b: Int): Int =
-    {
-        if (a > b) a else b
+  // Methods
+  // Parameters are VAL not VAR
+  // Also note the return type = Int
+  def newFunction(a: Int, b: Int): Int = {
+    if (a > b) a else b
+  }
+
+  // scalastyle:off println
+  def printOutput(): Unit = {
+
+    println("\n** TEST ClassTemplate **")
+    println("Object of class ClassTemplate")
+    println("Object toString => " + this.toString)
+    println("Object hash => " + this.##)
+
+    val th = new ClassTemplate("John", "Way")
+    if (this == th) {
+      println("This object is equal to " + th.toString)
     }
 
-    // scalastyle:off println
-    def printOutput(): Unit =
-    {
+  }
+  // scalastyle:on println
 
-        println("\n** TEST ClassTemplate **")
-        println("Object of class ClassTemplate")
-        println("Object toString => " + this.toString)
-        println("Object hash => " + this.##)
+  // Override 'Any' method: toString
+  override def toString: String = s"[$name $surname]"
 
-        val th = new ClassTemplate("John", "Way")
-        if (this == th)
-        {
-            println("This object is equal to " + th.toString)
-        }
+  // Override 'Any' method: equals (Any method '==' is final
+  // and cannot be overridden
+  override def equals(that: Any): Boolean = that match {
+    case that: ClassTemplate => this.isEqualTo(that)
+    case _                   => false
+  }
 
+  private def isEqualTo(that: ClassTemplate): Boolean = {
+
+    var isEqual = false
+    if (that.name.equalsIgnoreCase(this.name)) {
+      if (that.surname.equalsIgnoreCase(this.surname)) {
+        isEqual = true
+      }
     }
-    // scalastyle:on println
+    isEqual
 
-    // Override 'Any' method: toString
-    override def toString: String = s"[$name $surname]"
+  }
 
+  // Properties
+  def name: String = this.objName
 
-    // Override 'Any' method: equals (Any method '==' is final
-    // and cannot be overridden
-    override def equals(that: Any): Boolean = that match
-    {
-        case that: ClassTemplate => this.isEqualTo(that)
-        case _ => false
-    }
+  def surname: String = this.objSurname
 
-    private def isEqualTo(that: ClassTemplate): Boolean =
-    {
+  // Getters and setters
+  // NOTE: both getter and setter must be present in order to work!
+  private var _position = "Unknown"
 
-        var isEqual = false
-        if (that.name.equalsIgnoreCase(this.name))
-        {
-            if (that.surname.equalsIgnoreCase(this.surname))
-            {
-                isEqual = true
-            }
-        }
-        isEqual
+  def position: String = this._position // Getter
+  def position_=(value: String): Unit = this._position = value // Setter
 
-    }
+  // Override 'Any' method: hashCode (Any method '##' is final
+  // and cannot be overridden
+  override def hashCode(): Int = {
+    var hash = 0
 
-    // Properties
-    def name: String = this.objName
+    for (c <- this.name)
+      hash += c
 
-    def surname: String = this.objSurname
+    for (c <- this.surname)
+      hash += c
 
-    // Getters and setters
-    // NOTE: both getter and setter must be present in order to work!
-    private var _position = "Unknown"
+    hash
+  }
 
-    def position: String = this._position // Getter
-    def position_=(value: String): Unit = this._position = value // Setter
-
-    // Override 'Any' method: hashCode (Any method '##' is final
-    // and cannot be overridden
-    override def hashCode(): Int =
-    {
-        var hash = 0
-
-        for (c <- this.name)
-            hash += c
-
-        for (c <- this.surname)
-            hash += c
-
-        hash
-    }
-
-    // Static Methods: SCALA HAS NO STATIC METHODS IN CLASSES! Use 'object' as a factory...
+  // Static Methods: SCALA HAS NO STATIC METHODS IN CLASSES! Use 'object' as a factory...
 
 }

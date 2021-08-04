@@ -7,43 +7,38 @@
  */
 package scalalearn
 
-/**
- * Option is the preferred way to handle nullable types
- */
-object Options extends LearningModule
-{
+/** Option is the preferred way to handle nullable types
+  */
+object Options extends LearningModule {
 
-    def removeExcept(someString: String): Option[String] =
-    {
-        if (someString.startsWith("!"))
-        {
-            return None
-        }
-
-        Some(someString.substring(1))
+  def removeExcept(someString: String): Option[String] = {
+    if (someString.startsWith("!")) {
+      return None
     }
 
-    def printOutput(): Unit =
-    {
+    Some(someString.substring(1))
+  }
 
-        val test = new ResultsPrinter("OPTIONS")
+  def printOutput(): Unit = {
 
-        val first = "-This is OK"
-        val second = "!This is KO"
+    val test = new ResultsPrinter("OPTIONS")
 
-        val removeOne: Option[String] = removeExcept(first)
-        val removeTwo: Option[String] = removeExcept(second)
+    val first = "-This is OK"
+    val second = "!This is KO"
 
-        var removeOneResult: String = "This is not defined (None)"
-        var removeTwoResult: String = "This is not defined (None)"
+    val removeOne: Option[String] = removeExcept(first)
+    val removeTwo: Option[String] = removeExcept(second)
 
-        removeOneResult = removeOne.getOrElse("Unknown")
-        removeTwoResult = removeTwo.getOrElse("Unknown")
+    var removeOneResult: String = "This is not defined (None)"
+    var removeTwoResult: String = "This is not defined (None)"
 
-        test.addResult(removeOneResult)
-        test.addResult(removeTwoResult)
+    removeOneResult = removeOne.getOrElse("Unknown")
+    removeTwoResult = removeTwo.getOrElse("Unknown")
 
-        test.print()
-    }
+    test.addResult(removeOneResult)
+    test.addResult(removeTwoResult)
+
+    test.print()
+  }
 
 }
