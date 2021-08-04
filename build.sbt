@@ -4,7 +4,7 @@ lazy val root = project
         .in(file("."))
         .settings(
             name := "Scala Learn",
-            version := "0.8",
+            version := "0.10",
             scalaVersion := scala3Version,
             libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.9",
             libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % "test"

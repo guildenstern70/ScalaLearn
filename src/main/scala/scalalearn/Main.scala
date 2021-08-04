@@ -16,7 +16,7 @@ import scala.collection.mutable.ListBuffer
   */
 object Main {
 
-  final val VERSION = "v.0.9"
+  final val VERSION = "v.0.10"
 
   def main(args: Array[String]): Unit = {
 
