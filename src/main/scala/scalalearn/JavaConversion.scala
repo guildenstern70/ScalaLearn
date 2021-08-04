@@ -15,7 +15,8 @@ import scala.jdk.CollectionConverters.*
   */
 abstract class JavaConversion extends LearningModule {
 
-  val javaList = new java.util.ArrayList[String](10)
+  val initialCapacity = 10
+  val javaList = new java.util.ArrayList[String](initialCapacity)
   val scalaList: mutable.Seq[String] = javaList.asScala
 
   for (item: String <- scalaList) {

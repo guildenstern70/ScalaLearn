@@ -11,8 +11,8 @@ package scalalearn
 abstract class TryCatch extends LearningModule {
 
   def trycatch(): Unit = {
-    try {
-      // your scala code here
+    try { // scalastyle:ignore
+      // your code here
     } catch {
       case _: IndexOutOfBoundsException => print("Index Out Of Bounds")
       case bar: NotImplementedError =>
@@ -24,5 +24,8 @@ abstract class TryCatch extends LearningModule {
     }
 
   }
+
+  // util.Try is stylish and functional!
+  def utilTry(): util.Try[Int] = util.Try( 10 )
 
 }

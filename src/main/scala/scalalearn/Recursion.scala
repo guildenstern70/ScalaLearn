@@ -44,10 +44,12 @@ object Recursion extends LearningModule {
     * @return
     *   Sum of the list items
     */
-  def recursiveSum3(intList: List[Int]): Int = {
-    if (intList == List()) return 0
-    intList.head + recursiveSum3(intList.tail)
-  }
+  def recursiveSum3(intList: List[Int]): Int =
+    if (intList == List()) {
+      0
+    } else {
+      intList.head + recursiveSum3(intList.tail)
+    }
 
   def recursionApplied(): Int = {
     val someNumbers = List(111, 222, 333, 444, 555)

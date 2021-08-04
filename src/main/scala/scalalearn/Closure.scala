@@ -13,6 +13,7 @@ package scalalearn
 object Closure extends LearningModule {
 
   var someNumbers = List(11, 10, 5, 0, 5, 10)
+  val closureNumber = 5
 
   // Closure: the variable 'someNumbers' is FREE.
   // When "closure" it's called, it takes the most recent
@@ -22,14 +23,12 @@ object Closure extends LearningModule {
   }
 
   def printOutput(): Unit = {
-
     val test = new ResultsPrinter("CLOSURE")
-    val result = closure(5)
+    val result = closure(closureNumber)
     for (oInt <- result) {
       test.addResult("Value = %d".format(oInt))
     }
     test.print()
-
   }
 
 }

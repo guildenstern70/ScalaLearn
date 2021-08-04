@@ -13,7 +13,7 @@ class ResultsPrinter(testName: String) {
 
   val results = new ListBuffer[String]
 
-  def +=(result: String): Unit = {
+  def +=(result: String): Unit = { // scalastyle:ignore
     this.addResult(result)
   }
 

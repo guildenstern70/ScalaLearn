@@ -19,9 +19,8 @@ class ListAndTupleSpec extends AnyFlatSpec with should.Matchers {
   }
 
   "The #2 list" should "contain 1,2,3,4" in {
-
-    ListAndTuple.myList2 should be(List(1, 2, 3, 4))
-
+    val resultingList = List(1, 2, 3, 4)
+    ListAndTuple.myList2 should be(resultingList)
   }
 
   "The tuple" should "contain expected values" in {
