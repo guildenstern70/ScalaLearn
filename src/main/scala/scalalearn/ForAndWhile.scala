@@ -1,20 +1,10 @@
-// ScalaLearn
-//
-// Copyright (C) Alessio Saltarin - 2013-21
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-//
+/*
+ * ScalaLearn Project
+ * Copyright (c) Alessio Saltarin, 2021
+ * This software is licensed under MIT License
+ * See LICENSE
+ *
+ */
 package scalalearn
 
 import scala.collection.mutable.ListBuffer
@@ -26,9 +16,10 @@ object ForAndWhile extends LearningModule
     var results = new ListBuffer[Int]()
     var testName: String = ""
 
-    // Best compromise between functional and imperative
-    List.range(0, 10).foreach
-    { i =>
+    // Normal for loop
+    val ints = List.range(0,10)
+    for i <- ints do
+    {
         results.append(i)
     }
 
@@ -55,10 +46,10 @@ object ForAndWhile extends LearningModule
     this.printOutput("FOR #3")
 
     // Yielding
-    val ints: Array[Int] = for (a <- someNumbers) yield a * 2
-    ints.foreach
+    val yieldInts: Array[Int] = for (a <- someNumbers) yield a * 2
+    for i <- yieldInts do
     {
-        this.results += _
+        results.append(i)
     }
     this.printOutput("YIELD")
 
@@ -68,9 +59,9 @@ object ForAndWhile extends LearningModule
         (x, i) <- ints.zipWithIndex
         if i % 2 != 0
     } yield x
-    ints.foreach
+    for i <- ints do
     {
-        this.results += _
+        results.append(i)
     }
     this.printOutput("FOR COMPREHENSION")
 
