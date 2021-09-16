@@ -7,6 +7,8 @@
  */
 package scalalearn
 
+import scala.annotation.tailrec
+
 object Recursion extends LearningModule {
 
   /** This function is recursive. It iteratively take out the head of the list
@@ -30,7 +32,7 @@ object Recursion extends LearningModule {
     * @return
     *   Sum of the list items
     */
-  def recursiveSum2(intList: List[Int], sum: Int, index: Int): Int = {
+  @tailrec def recursiveSum2(intList: List[Int], sum: Int, index: Int): Int = {
     if (intList.length == index) {
       return sum
     }

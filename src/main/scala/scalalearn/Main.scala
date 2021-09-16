@@ -16,7 +16,7 @@ import scala.collection.mutable.ListBuffer
   */
 object Main {
 
-  final val VERSION = "v.0.10"
+  final val VERSION = "v.0.11"
 
   def main(args: Array[String]): Unit = {
 
@@ -47,6 +47,7 @@ object Main {
     useCases.append(MapReduce)
     useCases.append(ByNameParam)
     useCases.append(Recursion)
+    useCases.append(TypeParameterization)
 
     useCases.foreach(_.printOutput())
 

@@ -7,8 +7,15 @@
  */
 package scalalearn
 
-/** A template for a common class in Scala
+/**
+  * A template for a common class in Scala.
   *
+  *  A shortcut for constructor parameters can be:
+  *  {{{
+      class ClassTemplate(var objName: String, var objSurname: String) {...}
+      class ClassTemplate(val objName: String, val objSurname:String {...}
+  *  }}}
+  *  the last one in case name and surname do not need a setter.
   * @param pName
   *   : A parameter
   * @param pSurname

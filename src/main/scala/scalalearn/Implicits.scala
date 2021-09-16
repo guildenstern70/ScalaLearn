@@ -15,8 +15,13 @@ object Implicits extends LearningModule {
 
   case class NumberString(number: String)
 
+  // Implicit conversions
   implicit def numberStringToInt(d: NumberString): Int =
     d.number.toInt
+
+  // Implicit parameter. See also 'Currying'
+  def addTwo(a: Int)(implicit b: Int = 2) =
+    (a + b)
 
   override def printOutput(): Unit = {
 
@@ -25,7 +30,10 @@ object Implicits extends LearningModule {
 
     // This should be 46
     val result = 2 * impl
+    // This should be 34
+    var result2 = addTwo(32)
     test.addResult(s"${result.toString} should be 46")
+    test.addResult(s"${result2.toString} should be 34")
     test.print()
   }
 }
