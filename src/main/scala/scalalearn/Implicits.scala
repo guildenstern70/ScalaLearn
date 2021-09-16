@@ -20,7 +20,7 @@ object Implicits extends LearningModule {
     d.number.toInt
 
   // Implicit parameter. See also 'Currying'
-  def addTwo(a: Int)(implicit b: Int = 2) =
+  def addTwo(a: Int)(implicit b: Int = 2): Int =
     (a + b)
 
   override def printOutput(): Unit = {

@@ -14,13 +14,14 @@ object TypeParameterization extends LearningModule {
   val message = "message"
   val list = List(1, 2, 3)
 
-  def elemType[T](elem: T) = elem.getClass()
+  def elemType[T](elem: T): String = elem.getClass().toString
 
   override def printOutput(): Unit = {
 
     val printer = new ResultsPrinter("Type Parameterization")
-    printer.printDetail(this.elemType(message))
-    printer.printDetail(this.elemType(list))
+    printer.addResult(this.elemType(message))
+    printer.addResult(this.elemType(list))
+    printer.print()
 
   }
 
