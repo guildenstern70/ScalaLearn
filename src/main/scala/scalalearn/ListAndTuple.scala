@@ -27,8 +27,8 @@ object ListAndTuple extends LearningModule {
   val myListBuilder = new ListBuffer[Int]()
   myListBuilder.append(1)
   myListBuilder.append(2)
-  myListBuilder.append(3)
-  myListBuilder.append(4)
+  myListBuilder += 3
+  myListBuilder += 4
   val myList2: List[Int] = myListBuilder.toList
 
   /* Iterating lists
