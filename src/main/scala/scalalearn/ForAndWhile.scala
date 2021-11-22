@@ -21,6 +21,11 @@ object ForAndWhile extends LearningModule {
     results.append(i)
   }
 
+  // Indexed for loop - indexes are zero based
+  for((x,i) <- someNumbers.view.zipWithIndex) {
+    results.append(i)
+  }
+
   // Iterate over a list
   // var j; can be omitted!
   for (j <- someNumbers) {
