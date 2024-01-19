@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -14,14 +14,14 @@ package scalalearn
   */
 object Currying extends LearningModule {
 
-  def formatTestMessages(
+  private def formatTestMessages(
       messages: List[String]
   )(joiner: () => String): String = {
     messages.mkString(joiner())
   }
 
   // scalastyle:off println
-  def example(): Unit = {
+  private def example(): Unit = {
     val messages = List("One", "Two", "Three")
     val dashSeparator = () => {
       " - "

@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -11,10 +11,10 @@ package scalalearn
 
 object TypeParameterization extends LearningModule {
 
-  val message = "message"
-  val list = List(1, 2, 3)
+  private val message = "message"
+  private val list = List(1, 2, 3)
 
-  def elemType[T](elem: T): String = elem.getClass().toString
+  private def elemType[T](elem: T): String = elem.getClass().toString
 
   override def printOutput(): Unit = {
 

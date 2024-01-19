@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -13,13 +13,13 @@ package scalalearn
   */
 object ByNameParam extends LearningModule {
 
-  def functionWithParamByName(pieceOfCode: => Unit): Unit = {
+  private def functionWithParamByName(pieceOfCode: => Unit): Unit = {
     println("Do some stuff before calling piece of code...")
     pieceOfCode
     println("... Ok, done.")
   }
 
-  def callByName(): Unit = {
+  private def callByName(): Unit = {
     functionWithParamByName(println("Hi everybody!"))
   }
 

@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -16,17 +16,17 @@ object FirstClassFunctions extends LearningModule {
   // It can be passed to a function as a parameter
   // circleArea and squareArea are functions that takes one parameter of type Double
   // and returns a Double
-  val circleArea: (Double) => Double = (radius: Double) => {
+  private val circleArea: (Double) => Double = (radius: Double) => {
     radius * radius * Math.PI
   }
 
-  val squareArea: (Double) => Double = (side: Double) => {
+  private val squareArea: (Double) => Double = (side: Double) => {
     side * side
   }
 
   // funcRun is a Higher Order Function:
   // since it accepts a function as parameter
-  def funcRun(func: Double => Double, v: Double): String = func(v).toString
+  private def funcRun(func: Double => Double, v: Double): String = func(v).toString
 
   def printOutput(): Unit = {
 

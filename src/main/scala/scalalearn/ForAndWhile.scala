@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -16,7 +16,7 @@ object ForAndWhile extends LearningModule {
   var testName: String = ""
 
   // Normal for loop
-  val ints = List.range(0, 10)
+  private val ints = List.range(0, 10)
   for i <- ints do {
     results.append(i)
   }
@@ -46,7 +46,7 @@ object ForAndWhile extends LearningModule {
   this.printOutput("FOR #3")
 
   // Yielding
-  val yieldInts: Array[Int] = for (a <- someNumbers) yield a * 2
+  private val yieldInts: Array[Int] = for (a <- someNumbers) yield a * 2
   for i <- yieldInts do {
     results.append(i)
   }

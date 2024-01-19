@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -9,7 +9,7 @@ package scalalearn
 
 object Arrays extends LearningModule {
   // Arrays map one-to-one with Java arrays (ie.: int[])
-  var myArray1: Array[Int] = Array(1, 2, 3, 4)
+  private val myArray1: Array[Int] = Array(1, 2, 3, 4)
 
   // Read item
   val item2: Int = myArray1(2)
@@ -19,7 +19,7 @@ object Arrays extends LearningModule {
 
   // Arrays can be generic
   // Initialization
-  var myArray2: Array[String] = Array.fill[String](2)("")
+  private val myArray2: Array[String] = Array.fill[String](2)("")
   myArray2(0) = "Alessio"
   myArray2(1) = "Saltarin"
 

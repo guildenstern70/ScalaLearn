@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -17,7 +17,7 @@ object Switch {
     test.print()
   }
 
-  def tryMatch(any: Any): String = any match {
+  private def tryMatch(any: Any): String = any match {
     case 17      => "Seventeen"
     case true    => "truth"
     case "hello" => "hi!"

@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -19,8 +19,8 @@ object CaseClasses extends LearningModule {
   // 6. Parameter can be specified by name
   case class Persona(name: String, surname: String)
 
-  val maria: Persona = Persona(surname = "Callas", name = "Maria")
-  val elena: Persona = maria.copy("Elena")
+  private val maria: Persona = Persona(surname = "Callas", name = "Maria")
+  private val elena: Persona = maria.copy("Elena")
 
   def printOutput(): Unit = {
 
@@ -35,11 +35,11 @@ object CaseClasses extends LearningModule {
 
   }
 
-  def whoWas(p: Persona): String =
+  private def whoWas(p: Persona): String =
     s"${p.name} ${p.surname} ${this.matchingPersona(p)}"
 
   // Case classes simple match
-  def matchingPersona(p: Persona): String = p match {
+  private def matchingPersona(p: Persona): String = p match {
     case Persona("Maria", "Callas") => "was a great singer."
     case _                          => "was unknown to most."
   }

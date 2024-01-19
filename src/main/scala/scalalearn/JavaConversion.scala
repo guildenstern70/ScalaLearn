@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -15,9 +15,9 @@ import scala.jdk.CollectionConverters.*
   */
 abstract class JavaConversion extends LearningModule {
 
-  val initialCapacity = 10
-  val javaList = new java.util.ArrayList[String](initialCapacity)
-  val scalaList: mutable.Seq[String] = javaList.asScala
+  private val initialCapacity = 10
+  private val javaList = new java.util.ArrayList[String](initialCapacity)
+  private val scalaList: mutable.Seq[String] = javaList.asScala
 
   for (item: String <- scalaList) {
     print(item)

@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -25,7 +25,7 @@ object Collections extends LearningModule {
    */
 
   /* Immutable: cannot add elements */
-  val dictionary: Map[Int, String] = Map(
+  private val dictionary: Map[Int, String] = Map(
     1 -> "AAA",
     2 -> "BBB",
     3 -> "CCC"
@@ -45,7 +45,7 @@ object Collections extends LearningModule {
   val third: Int = dictionary.keys.drop(2).head
 
   /* Mutable: you can add elements */
-  val mutableDictionary = collection.mutable.Map.empty[Int, String]
+  private val mutableDictionary = collection.mutable.Map.empty[Int, String]
   mutableDictionary += 1 -> "XXX"
   mutableDictionary += 2 -> "YYY"
 

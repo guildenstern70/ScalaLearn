@@ -13,29 +13,12 @@ A collection of simple source code examples in Scala 3, featuring key aspects of
     
         cd [project dir]
         sbt
-    
- 4. Compile with 
+ 3. Then, compile with 
     
         compile
-    
-
- 5. Run with
+ 4. Then, run with
     
         run
-    
- 6. Execute tests with
+ 5. Then, execute tests with
 
         test
- 
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -16,7 +16,7 @@ import scala.collection.mutable.ListBuffer
   */
 object Main {
 
-  final val VERSION = "v.0.11"
+  private final val VERSION = "v.0.11"
 
   def main(args: Array[String]): Unit = {
 

@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -13,7 +13,7 @@ package scalalearn
 object Closure extends LearningModule {
 
   var someNumbers = List(11, 10, 5, 0, 5, 10)
-  val closureNumber = 5
+  private val closureNumber = 5
 
   // Closure: the variable 'someNumbers' is FREE.
   // When "closure" it's called, it takes the most recent

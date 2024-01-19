@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -13,14 +13,14 @@ object MapReduce extends LearningModule {
 
   case class Person(name: String, age: Int, sex: Char)
 
-  val person1: Person = Person("Alessio", 47, 'M')
-  val person2: Person = Person("Giulia", 32, 'F')
-  val person3: Person = Person("Elena", 17, 'F')
-  val person4: Person = Person("Marco", 39, 'M')
+  private val person1: Person = Person("Alessio", 47, 'M')
+  private val person2: Person = Person("Giulia", 32, 'F')
+  private val person3: Person = Person("Elena", 17, 'F')
+  private val person4: Person = Person("Marco", 39, 'M')
 
-  val people = List(person1, person2, person3, person4)
+  private val people = List(person1, person2, person3, person4)
 
-  def averageAges: List[String] =
+  private def averageAges: List[String] =
       people.groupBy(_.sex)
         .view
         .mapValues(_.map(_.age))
@@ -28,13 +28,13 @@ object MapReduce extends LearningModule {
         .map(item => s"${item._1} > ${item._2}")
         .toList
 
-  def getMales: List[String] =
+  private def getMales: List[String] =
     people.filter(_.sex == 'M').map(_.name)
 
   /** Return the number of people grouped by sex
     * @return
     */
-  def countSex: List[String] = {
+  private def countSex: List[String] = {
     val groups: Map[Char, List[Person]] = people.groupBy(_.sex)
     val personsPerSex: Map[Char, Int] = groups.map {
       case (k: Char, v: List[Person]) => (k, v.length)

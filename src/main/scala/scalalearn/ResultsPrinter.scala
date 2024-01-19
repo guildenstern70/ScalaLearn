@@ -1,18 +1,20 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
  */
 package scalalearn
 
+import scala.annotation.targetName
 import scala.collection.mutable.ListBuffer
 
 class ResultsPrinter(testName: String) {
 
   val results = new ListBuffer[String]
 
+  @targetName("addResultToString")
   def +=(result: String): Unit = { // scalastyle:ignore
     this.addResult(result)
   }

@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -24,8 +24,8 @@ package scalalearn
 class ClassTemplate(pName: String, pSurname: String) extends LearningModule {
 
   // Constructor
-  protected val objName: String = pName
-  protected val objSurname: String = pSurname
+  private val objName: String = pName
+  private val objSurname: String = pSurname
 
   // Preconditions
   require(pName != null)

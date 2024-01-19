@@ -1,6 +1,6 @@
 /*
  * ScalaLearn Project
- * Copyright (c) Alessio Saltarin, 2021
+ * Copyright (c) Alessio Saltarin, 2021-24
  * This software is licensed under MIT License
  * See LICENSE
  *
@@ -11,7 +11,7 @@ package scalalearn
   */
 object Options extends LearningModule {
 
-  def removeExcept(someString: String): Option[String] =
+  private def removeExcept(someString: String): Option[String] =
     if (someString.startsWith("!")) {
       None
     } else {
