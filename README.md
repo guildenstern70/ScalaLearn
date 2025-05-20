@@ -25,3 +25,7 @@ ScalaLearn is a collection of simple source code examples in Scala 3, featuring 
    ``` bash  
    test
    ```
+
+## Version
+
+ScalaLearn version is indicated at 'Main.scala' file and in 'build.sbt' file.

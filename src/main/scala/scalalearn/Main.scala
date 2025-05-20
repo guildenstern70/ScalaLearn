@@ -16,7 +16,7 @@ import scala.collection.mutable.ListBuffer
   */
 object Main {
 
-  private final val VERSION = "v.0.11"
+  private final val VERSION = "v.0.14"
 
   def main(args: Array[String]): Unit = {
 
@@ -27,27 +27,29 @@ object Main {
 
     val useCases = new ListBuffer[LearningModule]()
 
-    useCases.append(ListAndTuple)
-    useCases.append(MutableAndImmutableSet)
-    useCases.append(FirstClassFunctions)
-    useCases.append(Closure)
-    useCases.append(MapForEachAndSoOn)
-    useCases.append(HighOrderFunction)
-    useCases.append(Currying)
-    useCases.append(Shapes)
-    useCases.append(TraitsTest)
-    useCases.append(Arrays)
-    useCases.append(ForAndWhile)
-    useCases.append(PartiallyAppliedFunction)
-    useCases.append(CaseClasses)
-    useCases.append(new ClassTemplate("John", "Way"))
-    useCases.append(Options)
-    useCases.append(Collections)
-    useCases.append(Implicits)
-    useCases.append(MapReduce)
-    useCases.append(ByNameParam)
-    useCases.append(Recursion)
-    useCases.append(TypeParameterization)
+    useCases.appendAll(Seq(
+      ListAndTuple,
+      MutableAndImmutableSet,
+      FirstClassFunctions,
+      Closure,
+      MapForEachAndSoOn,
+      HighOrderFunction,
+      Currying,
+      Shapes,
+      TraitsTest,
+      Arrays,
+      ForAndWhile,
+      PartiallyAppliedFunction,
+      CaseClasses,
+      new ClassTemplate("John", "Way"),
+      Options,
+      Collections,
+      Implicits,
+      MapReduce,
+      ByNameParam,
+      Recursion,
+      TypeParameterization
+    ))
 
     useCases.foreach(_.printOutput())
 
